@@ -21,7 +21,7 @@ export default function HeroSection() {
             {/* Main Content */}
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-screen flex flex-col justify-center pt-20 pb-10">
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
                     {/* Left Column: Text & Search */}
                     <div className="text-left">
