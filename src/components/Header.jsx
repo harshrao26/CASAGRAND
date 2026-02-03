@@ -36,7 +36,7 @@ export default function Header() {
                             <Home className={`w-5 h-5 ${scrolled ? 'text-white' : 'text-blue-600'}`} />
                         </div>
                         <span className={`text-xl font-bold transition-colors ${scrolled ? 'text-gray-900' : 'text-white'}`}>
-                            Real Nest
+                            Casagrand 
                         </span>
                     </div>
 
