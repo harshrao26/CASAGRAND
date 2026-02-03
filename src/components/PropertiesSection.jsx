@@ -1,0 +1,221 @@
+'use client';
+
+import { MapPin, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState } from 'react';
+import LeadForm from '@/components/LeadForm';
+
+const properties = [
+    {
+        id: 1,
+        name: 'Casagrand Suncity',
+        location: 'Kelambakkam',
+        price: '₹67 Lakhs',
+        amenities: '75+ Lifestyle Amenities',
+        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
+    },
+    {
+        id: 2,
+        name: 'Casagrand Luxus',
+        location: 'OMR',
+        price: '₹85 Lakhs',
+        amenities: '80+ Lifestyle Amenities',
+        image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
+    },
+    {
+        id: 3,
+        name: 'Casagrand Crescendo',
+        location: 'Porur',
+        price: '₹72 Lakhs',
+        amenities: '70+ Lifestyle Amenities',
+        image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80',
+    },
+    {
+        id: 4,
+        name: 'Casagrand Aristo',
+        location: 'ECR',
+        price: '₹95 Lakhs',
+        amenities: '90+ Lifestyle Amenities',
+        image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
+    },
+    {
+        id: 5,
+        name: 'Casagrand Supremus',
+        location: 'Tambaram',
+        price: '₹65 Lakhs',
+        amenities: '65+ Lifestyle Amenities',
+        image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
+    },
+    {
+        id: 6,
+        name: 'Casagrand Northern Star',
+        location: 'Madhavaram',
+        price: '₹58 Lakhs',
+        amenities: '60+ Lifestyle Amenities',
+        image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80',
+    },
+];
+
+const categories = [
+    'All Type',
+    'Industrial House',
+    'Apartment',
+    'Villa',
+    'Duplex',
+    'Warehouse',
+    'Resort',
+];
+
+export default function PropertiesSection() {
+    const [activeCategory, setActiveCategory] = useState('All Type');
+    const [showModal, setShowModal] = useState(false);
+    const [selectedProperty, setSelectedProperty] = useState(null);
+
+    const handleViewDetails = (property) => {
+        setSelectedProperty(property);
+        setShowModal(true);
+    };
+
+    return (
+        <section className="py-20 bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Section Header */}
+                <div className="text-center mb-12">
+                    <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                        Explore Casagrand Projects in Chennai
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                        Discover premium homes across Chennai's fastest-growing residential locations.
+                        Detailed project information is available after registration.
+                    </p>
+                </div>
+
+                {/* Category Filter */}
+                {/* <div className="flex items-center justify-center gap-3 mb-12 flex-wrap">
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            onClick={() => setActiveCategory(category)}
+                            className={`px-6 py-2.5 rounded-full font-medium transition-all ${
+                                activeCategory === category
+                                    ? 'bg-gray-900 text-white'
+                                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                            }`}
+                        >
+                            {category}
+                        </button>
+                    ))}
+                    <button className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors">
+                        <ChevronLeft className="w-5 h-5 text-gray-700" />
+                    </button>
+                    <button className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors">
+                        <ChevronRight className="w-5 h-5 text-gray-700" />
+                    </button>
+                </div> */}
+
+                {/* Property Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {properties.map((property) => (
+                        <div
+                            key={property.id}
+                            className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                        >
+                            {/* Property Image */}
+                            <div className="relative h-64 overflow-hidden">
+                                <img
+                                    src={property.image}
+                                    alt={property.name}
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                            </div>
+
+                            {/* Property Details */}
+                            <div className="p-6">
+                                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                                    {property.name}
+                                </h3>
+
+                                {/* Location */}
+                                <div className="flex items-center gap-2 text-gray-600 mb-2">
+                                    <MapPin className="w-4 h-4" />
+                                    <span className="text-sm">{property.location}</span>
+                                </div>
+
+                                {/* Price */}
+                                <div className="mb-2">
+                                    <span className="text-sm text-gray-600">Starting at </span>
+                                    <span className="text-xl font-bold text-gray-900">
+                                        {property.price}
+                                    </span>
+                                    <span className="text-sm text-gray-500">*</span>
+                                </div>
+
+                                {/* Amenities */}
+                                <div className="flex items-center gap-2 text-gray-600 mb-4">
+                                    <Sparkles className="w-4 h-4" />
+                                    <span className="text-sm">{property.amenities}</span>
+                                </div>
+
+                                {/* Action Buttons */}
+                                <div className="flex gap-3">
+                                    <button 
+                                        onClick={() => handleViewDetails(property)}
+                                        className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-4 rounded-lg font-medium transition-colors text-sm"
+                                    >
+                                        Get A Quote Now
+                                    </button>
+                                    <button
+                                        onClick={() => handleViewDetails(property)}
+                                        className="flex-1 border-2 border-gray-300 hover:border-blue-600 hover:text-blue-600 text-gray-700 py-2.5 px-4 rounded-lg font-medium transition-colors text-sm"
+                                    >
+                                        View Details
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Lead-Gated Modal */}
+            {showModal && (
+                <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+                    <div className="bg-white rounded-2xl max-w-md w-full p-8 relative">
+                        {/* Close Button */}
+                        <button
+                            onClick={() => setShowModal(false)}
+                            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                        >
+                            <svg
+                                className="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        </button>
+
+                        {/* Modal Content */}
+                        <div className="text-center mb-6">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                                Get Exclusive Details
+                            </h3>
+                            <p className="text-gray-600">
+                                Register to view complete project details for {selectedProperty?.name}
+                            </p>
+                        </div>
+
+                        {/* Lead Form */}
+                        <LeadForm />
+                    </div>
+                </div>
+            )}
+        </section>
+    );
+}
