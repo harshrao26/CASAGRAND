@@ -1,59 +1,10 @@
 'use client';
 
 import { MapPin, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import LeadForm from '@/components/LeadForm';
-
-const properties = [
-    {
-        id: 1,
-        name: 'Casagrand Suncity',
-        location: 'Kelambakkam',
-        price: '₹67 Lakhs',
-        amenities: '75+ Lifestyle Amenities',
-        image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
-    },
-    {
-        id: 2,
-        name: 'Casagrand Luxus',
-        location: 'OMR',
-        price: '₹85 Lakhs',
-        amenities: '80+ Lifestyle Amenities',
-        image: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80',
-    },
-    {
-        id: 3,
-        name: 'Casagrand Crescendo',
-        location: 'Porur',
-        price: '₹72 Lakhs',
-        amenities: '70+ Lifestyle Amenities',
-        image: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80',
-    },
-    {
-        id: 4,
-        name: 'Casagrand Aristo',
-        location: 'ECR',
-        price: '₹95 Lakhs',
-        amenities: '90+ Lifestyle Amenities',
-        image: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=800&q=80',
-    },
-    {
-        id: 5,
-        name: 'Casagrand Supremus',
-        location: 'Tambaram',
-        price: '₹65 Lakhs',
-        amenities: '65+ Lifestyle Amenities',
-        image: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80',
-    },
-    {
-        id: 6,
-        name: 'Casagrand Northern Star',
-        location: 'Madhavaram',
-        price: '₹58 Lakhs',
-        amenities: '60+ Lifestyle Amenities',
-        image: 'https://images.unsplash.com/photo-1600607687644-c7171b42498f?w=800&q=80',
-    },
-];
+import { useProjectContext } from '@/context/ProjectContext';
+import { getAllProjects, getProject } from '@/data/projects';
 
 const categories = [
     'All Type',
@@ -69,6 +20,19 @@ export default function PropertiesSection() {
     const [activeCategory, setActiveCategory] = useState('All Type');
     const [showModal, setShowModal] = useState(false);
     const [selectedProperty, setSelectedProperty] = useState(null);
+    const { selectedProject, propertiesSectionRef } = useProjectContext();
+
+    // Filter properties based on selected project
+    const properties = useMemo(() => {
+        if (selectedProject) {
+            // If a specific project is selected, show only that project
+            const project = getProject(selectedProject);
+            return project ? [project] : [];
+        } else {
+            // Show all projects
+            return getAllProjects();
+        }
+    }, [selectedProject]);
 
     const handleViewDetails = (property) => {
         setSelectedProperty(property);
@@ -76,7 +40,7 @@ export default function PropertiesSection() {
     };
 
     return (
-        <section className="py-20 bg-white">
+        <section ref={propertiesSectionRef} className="py-20 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-12">
