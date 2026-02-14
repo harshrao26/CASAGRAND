@@ -2,6 +2,7 @@
 
 import { Search, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+import Image from 'next/image';
 import LeadForm from '@/components/LeadForm';
 import { useProjectContext } from '@/context/ProjectContext';
 
@@ -33,10 +34,12 @@ export default function HeroSection() {
         <section className="relative min-h-screen w-full overflow-hidden">
             {/* Background Image */}
             <div className="absolute inset-0">
-                <img
-                    src="/hero-bg.png"
+                <Image
+                    src="/hero-bg_optimized.webp"
                     alt="Modern Architecture"
-                    className="w-full h-full object-cover"
+                    fill
+                    priority
+                    className="object-cover"
                 />
                 {/* Dark Gradient Overlay */}
                 {/* Additional Bottom Gradient */}

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { MapPin, Sparkles, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState, useMemo } from 'react';
 import LeadForm from '@/components/LeadForm';
@@ -85,10 +86,12 @@ export default function PropertiesSection() {
                         >
                             {/* Property Image */}
                             <div className="relative h-64 overflow-hidden">
-                                <img
+                                <Image
                                     src={property.image}
                                     alt={property.name}
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                    fill
+                                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                                    sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                             </div>
@@ -122,7 +125,7 @@ export default function PropertiesSection() {
 
                                 {/* Action Buttons */}
                                 <div className="flex gap-3">
-                                    <button 
+                                    <button
                                         onClick={() => handleViewDetails(property)}
                                         className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2.5 px-4 rounded-lg font-medium transition-colors text-sm"
                                     >

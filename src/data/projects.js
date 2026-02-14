@@ -6,7 +6,7 @@ export const PROJECTS_DATA = {
     location: "North Chennai",
     price: "₹58 Lakhs",
     amenities: "60+ Lifestyle Amenities",
-    image: "/images/Mercury/City%20view%20Aerial%201_tiff.webp",
+    image: "/images/Mercury/City%20view%20Aerial%201_tiff_optimized.webp",
     description:
       "Premium residential project in North Chennai with modern amenities",
   },
@@ -16,7 +16,7 @@ export const PROJECTS_DATA = {
     location: "West Chennai",
     price: "₹75 Lakhs",
     amenities: "75+ Lifestyle Amenities",
-    image: "/images/Elysium/image.png",
+    image: "/images/Elysium/image_optimized.webp",
     description: "Premium living spaces with world-class amenities",
   },
   Massimo: {
@@ -25,7 +25,8 @@ export const PROJECTS_DATA = {
     location: "West Chennai",
     price: "₹68 Lakhs",
     amenities: "65+ Lifestyle Amenities",
-    image: "/images/Massimo/3402_Kundrathur_Casa_Grand_Chennai_Image_22.jpg",
+    image:
+      "/images/Massimo/3402_Kundrathur_Casa_Grand_Chennai_Image_22_optimized.webp",
     description: "Modern apartments with exceptional facilities",
   },
   Osaka: {
@@ -34,7 +35,7 @@ export const PROJECTS_DATA = {
     location: "West Chennai",
     price: "₹71 Lakhs",
     amenities: "72+ Lifestyle Amenities",
-    image: "/images/Osaka/Copy%20of%20Shot_29_Building%20Facade.jpg",
+    image: "/images/Osaka/Copy%20of%20Shot_29_Building%20Facade_optimized.webp",
     description: "Japanese-inspired design with modern comfort",
   },
   Reva: {
@@ -43,7 +44,7 @@ export const PROJECTS_DATA = {
     location: "West Chennai",
     price: "₹69 Lakhs",
     amenities: "68+ Lifestyle Amenities",
-    image: "/images/Reva/Elevation%20View.jpg",
+    image: "/images/Reva/Elevation%20View_optimized.webp",
     description: "Contemporary homes with excellent connectivity",
   },
   Hola: {
@@ -52,7 +53,7 @@ export const PROJECTS_DATA = {
     location: "OMR",
     price: "₹82 Lakhs",
     amenities: "85+ Lifestyle Amenities",
-    image: "/images/Hola/Villa%20Day.jpg",
+    image: "/images/Hola/Villa%20Day_optimized.webp",
     description: "Premium residences on the IT corridor",
   },
   Flagship: {
@@ -61,7 +62,7 @@ export const PROJECTS_DATA = {
     location: "OMR",
     price: "₹88 Lakhs",
     amenities: "90+ Lifestyle Amenities",
-    image: "/images/Flagship/image.png",
+    image: "/images/Flagship/image_optimized.webp",
     description: "Flagship project with state-of-the-art facilities",
   },
   Jarvis: {
@@ -70,7 +71,7 @@ export const PROJECTS_DATA = {
     location: "OMR",
     price: "₹81 Lakhs",
     amenities: "80+ Lifestyle Amenities",
-    image: "/images/Jarvis/AREIAL%20NIGHT%20VIEW_Hires_V01.webp",
+    image: "/images/Jarvis/AREIAL%20NIGHT%20VIEW_Hires_V01_optimized.webp",
     description: "Smart homes with advanced technology",
   },
   Madelyn: {
@@ -79,7 +80,7 @@ export const PROJECTS_DATA = {
     location: "GST Road",
     price: "₹67 Lakhs",
     amenities: "72+ Lifestyle Amenities",
-    image: "/images/Madelyn/Copy%20of%20Aerial%20day.jpg",
+    image: "/images/Madelyn/Copy%20of%20Aerial%20day_optimized.webp",
     description: "Modern residences with excellent amenities",
   },
   Primrose: {
@@ -88,7 +89,7 @@ export const PROJECTS_DATA = {
     location: "GST Road",
     price: "₹70 Lakhs",
     amenities: "75+ Lifestyle Amenities",
-    image: "/images/Primrose/CG%20PRIMROSE%20ELEVATION-01.jpg",
+    image: "/images/Primrose/CG%20PRIMROSE%20ELEVATION-01_optimized.webp",
     description: "Premium homes with garden views",
   },
 };
