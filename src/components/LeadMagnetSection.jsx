@@ -72,12 +72,12 @@ export default function LeadMagnetSection() {
                     </div>
 
                     {/* Right Form */}
-                    <div className="bg-white rounded-2xl shadow-2xl p-8">
+                    <div id="lead-form" className="bg-white rounded-2xl shadow-2xl p-8">
                         <h3 className="text-2xl font-bold text-gray-900 mb-2">
                             Get Project Details Instantly
                         </h3>
                         <p className="text-gray-600 mb-6">
-                            Fill in your details to unlock exclusive offers
+                            Fill in your details to unlock exclusive details
                         </p>
 
                         <LeadForm />
