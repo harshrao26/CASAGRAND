@@ -50,9 +50,10 @@ export default function LeadForm({ className = "" }) {
                 <div className="relative">
                     <select className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all appearance-none text-gray-900">
                         <option value="" disabled selected>Select location</option>
-                        <option value="chennai">Chennai</option>
-                        <option value="bangalore">Bangalore</option>
-                        <option value="coimbatore">Coimbatore</option>
+                        <option value="north-chennai">North Chennai</option>
+                        <option value="west-chennai">West Chennai</option>
+                        <option value="omr">OMR (Old Mahabalipuram Road)</option>
+                        <option value="gst-road">GST Road</option>
                     </select>
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gray-500">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

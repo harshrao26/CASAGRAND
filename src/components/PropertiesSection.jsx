@@ -94,6 +94,14 @@ export default function PropertiesSection() {
                                     sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                                {/* Location Tag */}
+                                <div className="absolute top-4 right-4 z-10">
+                                    <div className="bg-black/40 backdrop-blur-md text-white px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1.5 border border-white/20 shadow-lg">
+                                        <MapPin className="w-3 h-3" />
+                                        {property.location}
+                                    </div>
+                                </div>
                             </div>
 
                             {/* Property Details */}

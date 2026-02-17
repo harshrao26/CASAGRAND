@@ -31,7 +31,7 @@ export default function HeroSection() {
     };
 
     return (
-        <section className="relative min-h-screen w-full overflow-hidden">
+        <section className="relative min-h-screen w-full overflow-hi dden">
             {/* Background Image */}
             <div className="absolute inset-0">
                 <Image
@@ -49,10 +49,10 @@ export default function HeroSection() {
             {/* Main Content */}
             <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full min-h-screen flex flex-col justify-center pt-20 pb-10">
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div className="flex items-center justify-between items-center">
 
                     {/* Left Column: Text & Search */}
-                    <div className="text-left">
+                    <div className="text-left md:w-2/3">
                         {/* Main Headline */}
                         <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight mb-4 drop-shadow-lg">
                             Explore Premium Homes in Chennai
@@ -65,7 +65,7 @@ export default function HeroSection() {
                         </p>
 
                         {/* Trust Strip */}
-                        <div className="flex flex-nowrap items-center gap-4 sm:gap-6 mb-10 text-white font-medium text-xs sm:text-base drop-shadow-sm overflow-x- auto no-scrollbar whitespace-nowrap">
+                        <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-10 text-white font-medium text-xs sm:text-base drop-shadow-sm overflow-x- auto no-scrollbar whitespace-nowrap">
                             <div className="flex items-center gap-2 shrink-0">
                                 <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center text-xs">✓</div>
                                 RERA Approved Projects
@@ -107,7 +107,7 @@ export default function HeroSection() {
 
                                     {/* Dropdown Menu */}
                                     {isProjectDropdownOpen && (
-                                        <div className="absolute top-full left-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-100 max-h-96 overflow-y-auto z-[10000] min-w-[250px]">
+                                        <div className=" absolute top-full left-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-100 max-h-96 overflow-y-auto z-20 min-w-[250px]">
                                             <div className="p-2">
                                                 {Object.entries(PROJECTS_BY_REGION).map(([region, projects]) => (
                                                     <div key={region} className="mb-2 last:mb-0">

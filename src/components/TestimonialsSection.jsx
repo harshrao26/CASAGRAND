@@ -1,6 +1,6 @@
 'use client';
 
-import { Quote, Star } from 'lucide-react';
+import { Quote, Star, Play } from 'lucide-react';
 
 const testimonials = [
     {
@@ -26,6 +26,25 @@ const testimonials = [
     },
 ];
 
+const videoTestimonials = [
+    {
+        id: 'oE67yPv9kt8',
+        title: 'Customer Experience 1',
+    },
+    {
+        id: 'Uv1jTGEFW78',
+        title: 'Customer Experience 2',
+    },
+    {
+        id: 'lNI5ePBlMi4',
+        title: 'Customer Experience 3',
+    },
+    {
+        id: 'Djk8Erf6NWA',
+        title: 'Customer Experience 4',
+    },
+];
+
 export default function TestimonialsSection() {
     return (
         <section className="py-20 bg-white">
@@ -40,45 +59,29 @@ export default function TestimonialsSection() {
                         trusted Casagrand for their dream home.
                     </p>
                 </div>
-
-                {/* Testimonials Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-                    {testimonials.map((testimonial, index) => (
-                        <div
-                            key={index}
-                            className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-blue-100 relative"
-                        >
-                            {/* Quote Icon */}
-                            <div className="absolute top-6 right-6 opacity-10">
-                                <Quote className="w-16 h-16 text-blue-600" />
-                            </div>
-
-                            {/* Rating */}
-                            <div className="flex gap-1 mb-4">
-                                {[...Array(testimonial.rating)].map((_, i) => (
-                                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
-                                ))}
-                            </div>
-
-                            {/* Testimonial Text */}
-                            <p className="text-gray-700 mb-6 relative z-10 italic">
-                                "{testimonial.text}"
-                            </p>
-
-                            {/* Author */}
-                            <div className="flex items-center gap-4">
-                                <img
-                                    src={testimonial.image}
-                                    alt={testimonial.name}
-                                    className="w-12 h-12 rounded-full object-cover"
-                                />
-                                <div>
-                                    <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
-                                    <p className="text-sm text-gray-600">{testimonial.location}</p>
+ 
+                {/* Video Testimonials Section */}
+                <div className="mb-20">
+                     
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        {videoTestimonials.map((video) => (
+                            <div key={video.id} className="relative aspect-video rounded-2xl overflow-hidden shadow-lg group">
+                                <iframe
+                                    className="w-full h-full"
+                                    src={`https://www.youtube.com/embed/${video.id}`}
+                                    title={video.title}
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                ></iframe>
+                                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors pointer-events-none"></div>
+                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+                                    <div className="bg-white/20 backdrop-blur-md p-4 rounded-full">
+                                        <Play className="w-8 h-8 text-white fill-white" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
 
                 {/* Trust Elements */}
