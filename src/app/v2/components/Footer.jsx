@@ -89,9 +89,7 @@ export default function Footer() {
                             <p className="text-gray-400 text-sm font-medium">
                                 © {currentYear} Casagrand Builder Private Limited. All rights reserved.
                             </p>
-                            <p className="text-gray-400 text-[10px] uppercase tracking-widest font-bold">
-                                CIN: U45201TN2003PTC052123 • ISO 9001:2008 Certified
-                            </p>
+                           
                         </div>
  
                     </div>
