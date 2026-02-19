@@ -9,12 +9,14 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import LeadMagnetSection from "./components/LeadMagnetSection";
 import WhyChooseSection from "./components/WhyChooseSection";
 import Footer from "./components/Footer";
+import StickyFooter from "./components/StickyFooter";
 
 const page = () => {
   return (
     <ProjectProvider>
       <div>
         <Header />
+        <StickyFooter/>
         <Hero />
         <PropertiesSection />
         <WhyChooseSection />

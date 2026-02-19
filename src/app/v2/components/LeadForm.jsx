@@ -7,7 +7,7 @@ export default function LeadForm({ className = "" }) {
         <form className={`space-y-4 ${className}`}>
             {/* Full Name */}
             <div className="group">
-                <label className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 group-focus-within:text-yellow-600 transition-colors">
+                <label className="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2 group-focus-within:text-yellow-600 transition-colors">
                     Full Name
                 </label>
                 <div className="relative">
@@ -25,7 +25,7 @@ export default function LeadForm({ className = "" }) {
 
             {/* Email Address */}
             <div className="group">
-                <label className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 group-focus-within:text-yellow-600 transition-colors">
+                <label className="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2 group-focus-within:text-yellow-600 transition-colors">
                     Email Address
                 </label>
                 <div className="relative">
@@ -43,7 +43,7 @@ export default function LeadForm({ className = "" }) {
 
             {/* Phone Number */}
             <div className="group">
-                <label className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 group-focus-within:text-yellow-600 transition-colors">
+                <label className="block text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2 group-focus-within:text-yellow-600 transition-colors">
                     Phone Number
                 </label>
                 <div className="relative">
@@ -62,7 +62,7 @@ export default function LeadForm({ className = "" }) {
             {/* Submit Button */}
             <button
                 type="submit"
-                className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3.5 rounded-2xl font-black text-lg transition-all shadow-xl shadow-yellow-500/20 hover:shadow-yellow-500/30 transform hover:-translate-y-1 flex items-center justify-center gap-3 mt-4 active:scale-95"
+                className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3.5 rounded-2xl font-semibold text-lg transition-all shadow-xl shadow-yellow-500/20 hover:shadow-yellow-500/30 transform hover:-translate-y-1 flex items-center justify-center gap-3 mt-4 active:scale-95"
             >
                 <span>View Projects & Offers</span>
                 <ArrowRight className="w-5 h-5" />
@@ -73,7 +73,7 @@ export default function LeadForm({ className = "" }) {
                 <div className="p-1 rounded-full bg-green-50 text-green-600 group-hover/note:bg-green-100 transition-colors">
                     <Lock className="w-3 h-3" />
                 </div>
-                <p className="text-[10px] uppercase tracking-widest font-bold text-gray-400">
+                <p className="text-[10px] uppercase tracking-widest font-semibold text-gray-400">
                     Secure & Private Verification
                 </p>
             </div>

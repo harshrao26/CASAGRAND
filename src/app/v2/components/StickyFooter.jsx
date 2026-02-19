@@ -30,7 +30,7 @@ export default function StickyFooter() {
                 <div className="grid grid-cols-3 gap-2 p-3">
                     <a
                         href="tel:+919876543210"
-                        className="flex flex-col items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition-colors"
+                        className="flex flex-col items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white py-3 rounded-lg transition-colors"
                     >
                         <Phone className="w-5 h-5" />
                         <span className="text-xs font-medium">Call Now</span>

@@ -101,12 +101,12 @@ export default function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="text-5xl sm:text-7xl font-semibold text-white leading-[1.1] tracking-tight opacity-0 animate-fade-in-up delay-100">
+            <h1 className="text-4xl sm:text-5xl font-semibold text-white leading-[1.1] tracking-tight opacity-0 animate-fade-in-up delay-100">
               Explore Premium Homes <br /> in Chennai
             </h1>
 
             {/* Subcopy */}
-            <div className="space-y-4">
+            <div className="space--4">
               <p className="text-xl sm:text-3xl font-bold text-yellow-500 leading-relaxed opacity-0 animate-fade-in-up delay-200">
                 Unlock Brochures, Prices & Exclusive Offers
               </p>
@@ -185,7 +185,7 @@ export default function Hero() {
           <div className="lg:col-span-5 opacity-0 animate-fade-in-up delay-400">
             <div className="bg-white/95 backdrop-blur-2xl p-5 sm:p-6 rounded-[2.5rem] shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-white/20">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">Get Instant Access</h3>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-2">Get Instant Access</h3>
                 <p className="text-gray-500 text-sm">Download brochure and price sheet instantly</p>
               </div>
               <LeadForm />
