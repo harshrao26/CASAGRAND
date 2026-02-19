@@ -7,10 +7,7 @@ export default function Footer() {
 
     const footerLinks = {
         company: [
-            { label: 'About Casagrand', href: '#' },
-            { label: 'Our Philosophy', href: '#' },
-            { label: 'Quality Standards', href: '#' },
-            { label: 'Contact Us', href: '#' }
+            
         ],
         portfolios: [
             { label: 'Luxury Homes', href: '#' },
@@ -62,41 +59,8 @@ export default function Footer() {
                     {/* Links Columns Grid */}
                     <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-12 sm:gap-16">
 
-                        {/* Company Links */}
-                        <div>
-                            <h4 className="text-white font-black text-xs uppercase tracking-[0.2em] mb-10 flex items-center gap-3">
-                                <div className="w-6 h-[1px] bg-yellow-500" />
-                                Company
-                            </h4>
-                            <ul className="space-y-6">
-                                {footerLinks.company.map((link, i) => (
-                                    <li key={i}>
-                                        <Link href={link.href} className="text-gray-400 font-medium hover:text-yellow-500 transition-colors flex items-center gap-2 group">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 scale-0 group-hover:scale-100 transition-transform" />
-                                            {link.label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-
-                        {/* Portfolio Links */}
-                        <div>
-                            <h4 className="text-white font-black text-xs uppercase tracking-[0.2em] mb-10 flex items-center gap-3">
-                                <div className="w-6 h-[1px] bg-yellow-500" />
-                                Portfolios
-                            </h4>
-                            <ul className="space-y-6">
-                                {footerLinks.portfolios.map((link, i) => (
-                                    <li key={i}>
-                                        <Link href={link.href} className="text-gray-400 font-medium hover:text-yellow-500 transition-colors flex items-center gap-2 group">
-                                            <div className="w-1.5 h-1.5 rounded-full bg-yellow-500 scale-0 group-hover:scale-100 transition-transform" />
-                                            {link.label}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
+                       
+                       
 
                         {/* Legal Links */}
                         <div className="col-span-2 md:col-span-1">
@@ -122,24 +86,18 @@ export default function Footer() {
                 <div className="border-t border-white/5 pt-12">
                     <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                         <div className="flex flex-col items-center md:items-start gap-2">
-                            <p className="text-gray-500 text-sm font-medium">
+                            <p className="text-gray-400 text-sm font-medium">
                                 © {currentYear} Casagrand Builder Private Limited. All rights reserved.
                             </p>
-                            <p className="text-gray-600 text-[10px] uppercase tracking-widest font-bold">
+                            <p className="text-gray-400 text-[10px] uppercase tracking-widest font-bold">
                                 CIN: U45201TN2003PTC052123 • ISO 9001:2008 Certified
                             </p>
                         </div>
-
-                        <div className="flex items-center gap-6 opacity-40 hover:opacity-100 transition-opacity duration-700">
-                            <div className="flex items-center gap-2">
-                                <ShieldCheck className="w-5 h-5 text-gray-400" />
-                                <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">Official Web Partner</span>
-                            </div>
-                        </div>
+ 
                     </div>
 
                     <div className="mt-8 text-center">
-                        <p className="text-[10px] text-gray-700 font-medium leading-relaxed max-w-4xl mx-auto italic">
+                        <p className="text-[10px] text-gray-500 font-medium leading-relaxed max-w-4xl mx-auto italic">
                             *Disclaimer: The information provided on this website is for general informational purposes only. All renderings, floor plans, and maps are artist's conceptions and not actual depictions of the building or its surroundings. Prices and availability are subject to change without notice. Please verify all details with our sales team before making a purchase.
                         </p>
                     </div>
