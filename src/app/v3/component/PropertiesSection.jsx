@@ -29,7 +29,7 @@ export default function PropertiesSection() {
     };
 
     return (
-        <section ref={propertiesSectionRef} className="md:py-16 py-8  bg-gradient-to-br from-[#276290] to-[#276290]/80">
+        <section ref={propertiesSectionRef} className="md:py-16 py-8  bg-gradient-to-r from-[#326A96] to-[#326A96]">
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Section Header */}

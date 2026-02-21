@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Hero = () => {
     return (
-        <section className="relative pt-40 h-screen w-full overflow-hidden text-white bg-[#276290]">
+        <section className="relative pt-40 h-screen w-full overflow-hidden text-white bg-[#326A96]">
             {/* Background Image */}
             <div className="absolute inset-0  z-0">
                 <Image
@@ -14,18 +14,21 @@ const Hero = () => {
                     priority
                 />
                 {/* Re-designed overlays for V3 luxury look */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#276290]/100 via-transparent to-[#276290]/20 z-10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#276290]/80 via-transparent to-[#276290]/70 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#326A96]/60 via-transparent to-[#326A96]/100 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#326A96]/70 via-transparent to-[#326A96]/70 z-10" />
             </div>
 
             <div className="relative z-20 h-full w-full flex flex-col items-center justify-e ter px-4">
                 {/* Main Content */}
                 <div className="max-w-7xl w-full text-center mb-12 animate-fade-in-up">
                     <h1 className="text-6xl md:text-7xl font-serif mb-4 leading-tighter text-white drop-shadow-2xl">
-                        Invest in UAE’s <span className="text-[#C89574]   font-light">Most Lucrative</span> Real Estate
+                      Explore Premium Homes in Chennai
+
                     </h1>
-                    <p className="text-lg md:text-xl mx-auto tracking-wide text-gray-200 opacity-90 drop-shadow-md lg:leading-relaxed">
-                        Experience absolute luxury and high returns, crafted with unmatched quality in iconic, world-class locations across Dubai.
+                    <p className="text-lg max-w-2xl md:text-xl mx-auto tracking-wide text-gray-00 opacity0 drop-shadow-md lg:leading-relaxed">
+                      Compare 5+ Casagrand Residential Projects in Chennai and get instant access to floor plans, pricing, and limited-period offers.
+
+
                     </p>
                 </div>
 
