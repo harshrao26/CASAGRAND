@@ -1,10 +1,33 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const Header = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 20) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
-        <header className="absolute top-0 left-0 w-full z-50 py-4 px-6 md:px-12 flex items-center justify-between">
+        <header 
+            className={`fixed top-0 left-0 w-full z-50 py-4 px-6 md:px-12 flex items-center justify-between transition-all duration-500 ${
+                isScrolled 
+                ? 'bg-[#326A96]/90 backdrop-blur-lg border-b border-white/10 py-3 shadow-lg' 
+                : 'bg-transparent border-b border-transparent'
+            }`}
+        >
             {/* Left Box (empty spacer for true centering) */}
             <div className="flex-1 hidden md:block"></div>
 
@@ -23,12 +46,6 @@ const Header = () => {
 
             {/* Right Navigation */}
             <div className="flex-1 flex justify-end">
-                {/* <div className="hidden md:flex items-center gap-8 text-white text-sm tracking-widest font-medium uppercase drop-shadow-md">
-                    <Link href="#" className="hover:text-amber-500 transition-colors">Projects</Link>
-                    <Link href="#" className="hover:text-amber-500 transition-colors">About Us</Link>
-                    <Link href="#" className="hover:text-amber-500 transition-colors">Contact</Link>
-                </div> */}
-
                 {/* Mobile Menu Button */}
                 <button className="md:hidden text-white drop-shadow-md p-2 -mr-2">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">

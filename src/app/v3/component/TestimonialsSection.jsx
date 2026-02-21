@@ -1,53 +1,37 @@
 'use client';
 
+import React, { useState } from 'react';
 import { Quote, Star, Play } from 'lucide-react';
-
-const testimonials = [
-    {
-        name: 'Rajesh K.',
-        location: 'Chennai',
-        rating: 5,
-        text: 'Casagrand delivered exactly what they promised. Quality construction and great community living.',
-        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
-    },
-    {
-        name: 'Priya S.',
-        location: 'Chennai',
-        rating: 5,
-        text: 'The buying process was smooth, and the team was very transparent throughout.',
-        image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
-    },
-    {
-        name: 'Arun M.',
-        location: 'Chennai',
-        rating: 5,
-        text: 'Excellent amenities and location. Best investment decision we made for our family.',
-        image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
-    },
-];
+import Image from 'next/image';
 
 const videoTestimonials = [
     {
         id: 'oE67yPv9kt8',
-        title: 'Customer Experience 1',
+        title: 'Luxury Living Experience',
+        thumbnail: '/youtube/image.png',
     },
     {
         id: 'Uv1jTGEFW78',
-        title: 'Customer Experience 2',
+        title: 'Our Dream Home Journey',
+        thumbnail: '/youtube/image copy.png',
     },
     {
         id: 'lNI5ePBlMi4',
-        title: 'Customer Experience 3',
+        title: 'Why We Chose Casagrand',
+        thumbnail: '/youtube/image copy 2.png',
     },
     {
         id: 'Djk8Erf6NWA',
-        title: 'Customer Experience 4',
+        title: 'The Perfect Investment',
+        thumbnail: '/youtube/hero-bg_optimized.webp',
     },
 ];
 
 export default function TestimonialsSection() {
+    const [playingId, setPlayingId] = useState(null);
+
     return (
-        <section className="py-20 md:py-32 bg-white">
+        <section className="py-20   bg-white">
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-16 md:mb-24">
@@ -59,25 +43,43 @@ export default function TestimonialsSection() {
                         trusted Casagrand for their dream home.
                     </p>
                 </div>
-
+ 
                 {/* Video Testimonials Section */}
-                <div className="mb-24">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="mb-24 px-4 sm:px-0">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
                         {videoTestimonials.map((video) => (
-                            <div key={video.id} className="relative aspect-video rounded-xl overflow-hidden shadow-lg group border border-gray-100">
-                                <iframe
-                                    className="w-full h-full"
-                                    src={`https://www.youtube.com/embed/${video.id}`}
-                                    title={video.title}
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                ></iframe>
-                                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors pointer-events-none"></div>
-                                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                                    <div className="bg-[#C89574]/90 backdrop-blur-sm p-4 rounded-full shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                                        <Play className="w-8 h-8 text-white fill-white" />
-                                    </div>
+                            <div key={video.id} className="flex flex-col gap-4">
+                                <div 
+                                    className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl group border border-gray-100 cursor-pointer bg-gray-100"
+                                    onClick={() => setPlayingId(video.id)}
+                                >
+                                    {playingId === video.id ? (
+                                        <iframe
+                                            className="w-full h-full"
+                                            src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+                                            title={video.title}
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowFullScreen
+                                        ></iframe>
+                                    ) : (
+                                        <>
+                                            <img
+                                                src={video.thumbnail}
+                                                alt={video.title}
+                                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                            />
+                                            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
+                                            <div className="absolute inset-0 flex items-center justify-center">
+                                                <div className="bg-[#C89574]/90 backdrop-blur-sm p-5 md:p-7 rounded-full shadow-2xl transform group-hover:scale-110 transition-transform duration-500">
+                                                    <Play className="w-8 h-8 md:w-10 md:h-10 text-white fill-white" />
+                                                </div>
+                                            </div>
+                                        </>
+                                    )}
                                 </div>
+                                <h3 className="text-xl md:text-2xl font-serif text-[#1C1C1C] px-2 italic">
+                                    "{video.title}"
+                                </h3>
                             </div>
                         ))}
                     </div>

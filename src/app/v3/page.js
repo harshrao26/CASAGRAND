@@ -8,6 +8,7 @@ import FAQSection from "./component/FAQSection";
 import { ProjectProvider } from "@/context/ProjectContext";
 import TestimonialsSection from "./component/TestimonialsSection";
 import Footer from "./component/Footer";
+import StickyFooter from "./component/StickyFooter";
 
 const page = () => {
   return (
@@ -21,7 +22,7 @@ const page = () => {
         <TestimonialsSection />
         <FAQSection />
         <Footer />
-
+        <StickyFooter />
       </main>
     </ProjectProvider>
   );

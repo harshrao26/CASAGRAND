@@ -1,32 +1,37 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
-import { Home, TrendingUp, ShieldCheck, CreditCard, Banknotes, BadgePercent } from 'lucide-react';
+import { Home, TrendingUp, ShieldCheck, MapPin, Building2, Briefcase } from 'lucide-react';
 
 const cards = [
     {
-        icon: Home,
-        title: "Rental Yields",
-        desc: "6-8% net yield with real rent comps & cost"
+        icon: Building2,
+        title: "IT & Industry Hubs",
+        desc: "Strong demand driven by the booming IT and manufacturing sectors in Chennai."
+    },
+    {
+        icon: MapPin,
+        title: "Elite Connectivity",
+        desc: "Excellent metro and road networks connecting major business hubs and residential areas."
     },
     {
         icon: TrendingUp,
-        title: "High Rental Demand",
-        desc: "Consistent occupancy rates across prime communities with rising tenant demand."
+        title: "Steady Appreciation",
+        desc: "Consistent property value appreciation and high rental yields for long-term growth."
     },
     {
         icon: ShieldCheck,
-        title: "Transparent & Regulated",
-        desc: "One of the most transparent real-estate markets globally with strict compliance standards."
+        title: "Stable Investment",
+        desc: "One of India's most stable markets, perfect for both end-users and smart investors."
     },
     {
-        icon: CreditCard,
-        title: "Flexible Payment Plans",
-        desc: "Multiple options backed by secure, developer-friendly and investor-focused payment structures."
+        icon: Home,
+        title: "Premium Proximity",
+        desc: "Strategically located near top schools, hospitals, and malls for an effortless lifestyle."
     },
     {
-        icon: BadgePercent,
-        title: "Tax-Free Environment",
-        desc: "0% income and capital gains tax allows you to maximize your investment returns."
+        icon: Briefcase,
+        title: "Employment Growth",
+        desc: "Located within 10-20 minutes of major IT parks and employment centers."
     }
 ];
 
@@ -53,7 +58,7 @@ export default function WhyChooseSection() {
     }, []);
 
     return (
-        <section className="relative w-full py-16 md:py-24 bg-white overflow-hidden">
+        <section className="relative w-full py-16 bg-white overflow-hidden">
             <style dangerouslySetInnerHTML={{__html: `
                 .hide-scrollbar::-webkit-scrollbar {
                     display: none;
@@ -66,10 +71,10 @@ export default function WhyChooseSection() {
 
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
                 <h2 className="text-3xl md:text-5xl lg:text-[56px] font-serif text-[#1C1C1C] mb-4 tracking-tight leading-tight">
-                    Why Dubai Is the World's Most Secure Investment Market.
+                    Why Invest in Chennai Real Estate?
                 </h2>
-                <p className="text-sm md:text-base text-gray-600 font-medium tracking-wide">
-                    Quick answers to core investor motivations.
+                <p className="text-sm md:text-base text-gray-600 font-medium tracking-wide max-w-3xl mx-auto">
+                    Chennai continues to be one of India’s most stable and high-potential real estate markets, driven by strong IT growth, infrastructure development, and consistent demand from end-users and investors.
                 </p>
             </div>
 

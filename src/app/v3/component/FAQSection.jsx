@@ -4,20 +4,20 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
     {
-        question: "Why should I invest in Dubai Properties with Casagrand?",
-        answer: "Casagrand offers unmatched quality, on-time delivery, and high rental yields. With our strong track record and focus on investor satisfaction, we provide secure and highly profitable investment opportunities in Dubai."
+        question: "Is Casagrand a reliable builder in Chennai?",
+        answer: "With over two decades of excellence, Casagrand is one of South India's leading real estate developers. We have delivered over 140+ projects and are trusted by 50,000+ happy families, known for our commitment to quality and on-time delivery."
     },
     {
-        question: "What types of properties are available for sale in Dubai through Casagrand?",
-        answer: "We offer a diverse portfolio of premium residential properties, ranging from luxury apartments and spacious townhouses to exclusive villas in prime, high-demand communities."
+        question: "Are all Casagrand projects in Chennai RERA compliant?",
+        answer: "Yes, absolute transparency is our core value. Every Casagrand project is registered with the Tamil Nadu Real Estate Regulatory Authority (TNRERA), ensuring that all project details, timelines, and legalities are strictly followed and accessible to our buyers."
     },
     {
-        question: "Can foreign investors buy property in Dubai with Casagrand?",
-        answer: "Yes, Dubai offers designated freehold areas where foreign nationals can 100% own real estate. Casagrand provides end-to-end assistance for foreign investors to seamlessly acquire property."
+        question: "What makes Casagrand residential projects unique?",
+        answer: "Our projects are 'Designed for Life.' We focus on providing 40+ superior amenities in every project, high-quality finishes, maximum ventilation (Vastu compliant), and strategic locations near major IT and industrial corridors, ensuring great rental potential."
     },
     {
-        question: "What makes Casagrand's developments stand out in the Dubai real estate market?",
-        answer: "Our developments are distinguished by world-class amenities, premium finishes, strategic locations, and a commitment to sustainable living, ensuring high capital appreciation and rental demand."
+        question: "Does Casagrand offer flexible payment options for homebuyers?",
+        answer: "We offer several attractive payment structures, including construction-linked plans and tie-ups with leading financial institutions for easy home loans, making it convenient for both first-time homebuyers and seasoned investors to secure their dream home."
     }
 ];
 
@@ -29,7 +29,7 @@ export default function FAQSection() {
     };
 
     return (
-        <section className="w-full py-20 md:py-32 bg-white">
+        <section className="w-full py-20   bg-white">
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
 
