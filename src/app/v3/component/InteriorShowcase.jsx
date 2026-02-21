@@ -27,15 +27,20 @@ const InteriorShowcase = () => {
     }, []);
 
     return (
-        <section 
+        <section
             ref={sectionRef}
             className="relative w-full py-12 md:py-0 bg-white"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="mb-12 md:mb-16 text-center">
+                    <h2 className="text-3xl md:text-5xl lg:text-[56px] font-serif text-[#1C1C1C] mb-4 tracking-tight leading-tight">
+                        Your Home, Quietly Perfected with 231 Standards
+                    </h2>
+                </div>
                 {isInView && (
                     <div className="relative aspect-video w-full rounded-[80px] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.25)] border border-gray-100">
                         <div className="absolute inset-0 pointer-events-none">
-                            <iframe 
+                            <iframe
                                 src="https://www.youtube.com/embed/eOK6gwjKXZo?autoplay=1&mute=1&loop=1&playlist=eOK6gwjKXZo&controls=0&rel=0&showinfo=0&iv_load_policy=3&modestbranding=1"
                                 className="absolute top-1/2 left-1/2 w-[101%] h-[101%] -translate-x-1/2 -translate-y-1/2 object-contain border-0"
                                 allow="autoplay; encrypted-media"
@@ -45,7 +50,7 @@ const InteriorShowcase = () => {
                     </div>
                 )}
             </div>
-         </section>
+        </section>
     );
 };
 

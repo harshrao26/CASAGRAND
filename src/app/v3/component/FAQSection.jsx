@@ -22,10 +22,14 @@ const faqs = [
 ];
 
 export default function FAQSection() {
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openIndices, setOpenIndices] = useState([0, 1]);
 
     const toggleFaq = (idx) => {
-        setOpenIndex(openIndex === idx ? null : idx);
+        setOpenIndices(prev =>
+            prev.includes(idx)
+                ? prev.filter(i => i !== idx)
+                : [...prev, idx]
+        );
     };
 
     return (
@@ -43,7 +47,7 @@ export default function FAQSection() {
                     {/* Right: Accordion */}
                     <div className="lg:w-2/3 flex flex-col gap-4">
                         {faqs.map((faq, idx) => {
-                            const isOpen = openIndex === idx;
+                            const isOpen = openIndices.includes(idx);
                             return (
                                 <div
                                     key={idx}
@@ -55,7 +59,7 @@ export default function FAQSection() {
                                     >
                                         <div className="flex items-start gap-4 pr-4">
                                             <div className="shrink-0 mt-0.5">
-                                                <span className="inline-flex items-center justify-center w-8 h-8 rounded bg-[#C89574] text-white text-xs font-semibold">
+                                                <span className="inline-flex items-center justify-center w-8 h-8 rounded bg-[#FCB63A] text-white text-xs font-semibold">
                                                     Q{idx + 1}
                                                 </span>
                                             </div>
@@ -64,7 +68,7 @@ export default function FAQSection() {
                                             </span>
                                         </div>
                                         <div className="shrink-0 text-gray-500">
-                                            {isOpen ? <Minus className="w-5 h-5 text-[#C89574]" /> : <Plus className="w-5 h-5" />}
+                                            {isOpen ? <Minus className="w-5 h-5 text-[#FCB63A]" /> : <Plus className="w-5 h-5" />}
                                         </div>
                                     </button>
 

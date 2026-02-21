@@ -24,7 +24,7 @@ export default function StickyFooter() {
     return (
         <>
             <div
-                className={`fixed bottom-0 left-0 right-0 z-40 bg-[#1C 1C1C]/95 backdrop-blur-md border-t border-white/10 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] transition-transform duration-500 ${isVisible ? 'translate-y-0' : 'translate-y-full'
+                className={`fixed bottom-0 left-0 right-0 z-40 bg-[#1C1C1C]/95 backdrop-blur-md border-t border-white/10 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] transition-transform duration-500 ${isVisible ? 'translate-y-0' : 'translate-y-full'
                     }`}
             >
                 <div className="max-w-4xl mx-auto px-4">
@@ -35,18 +35,18 @@ export default function StickyFooter() {
                         href="https://wa.me/919876543210"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-col items-center justify-center gap-1.5 bg-white/5 hover:bg-white/10 text-white py-3 rounded-xl border border-white/10 transition-all active:scale-95"
+                        className="flex flex-col items-center justify-center gap-1.5 bg-white hover:bg-white/10 text-white py-3 rounded-xl border border-white/10 transition-all active:scale-95"
                     >
                         <MessageCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-[10px] font-bold uppercase tracking-wider">Chat</span>
+                        <span className="text-[18px] font-bold uppercase text-black tracking-wider">Chat</span>
                     </a>
 
                     <button
                         onClick={() => setShowModal(true)}
-                        className="flex flex-col items-center justify-center gap-1.5 bg-[#C89574] hover:bg-[#B68465] text-white py-3 rounded-xl shadow-lg transition-all active:scale-95"
+                        className="flex flex-col items-center justify-center gap-1.5 bg-[#FCB63A] hover:bg-[#B68465] text-white py-3 rounded-xl shadow-lg transition-all active:scale-95"
                     >
                         <Download className="w-4 h-4" />
-                        <span className="text-[10px] font-bold uppercase tracking-wider">Brochure</span>
+                        <span className="text-[18px] font-bold uppercase tracking-wider">Brochure</span>
                     </button>
 
                     <button
@@ -54,7 +54,7 @@ export default function StickyFooter() {
                         className="flex flex-col items-center justify-center gap-1.5 bg-white text-black py-3 rounded-xl shadow-lg transition-all active:scale-95"
                     >
                         <Mail className="w-4 h-4" />
-                        <span className="text-[10px] font-bold uppercase tracking-wider">Enquire</span>
+                        <span className="text-[18px] font-bold uppercase tracking-wider">Enquire</span>
                     </button>
                     </div>
                 </div>

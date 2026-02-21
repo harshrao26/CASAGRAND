@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
                                     {playingId === video.id ? (
                                         <iframe
                                             className="w-full h-full"
-                                            src={`https://www.youtube.com/embed/${video.id}?autoplay=1`}
+                                            src={`https://www.youtube.com/embed/${video.id}?autoplay=1&controls=0&modestbranding=1&rel=0&iv_load_policy=3&showinfo=0`}
                                             title={video.title}
                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                             allowFullScreen
@@ -70,7 +70,7 @@ export default function TestimonialsSection() {
                                             />
                                             <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
                                             <div className="absolute inset-0 flex items-center justify-center">
-                                                <div className="bg-[#C89574]/90 backdrop-blur-sm p-5 md:p-7 rounded-full shadow-2xl transform group-hover:scale-110 transition-transform duration-500">
+                                                <div className="bg-[#FCB63A]/90 backdrop-blur-sm p-5 md:p-7 rounded-full shadow-2xl transform group-hover:scale-110 transition-transform duration-500">
                                                     <Play className="w-8 h-8 md:w-10 md:h-10 text-white fill-white" />
                                                 </div>
                                             </div>
@@ -88,19 +88,19 @@ export default function TestimonialsSection() {
                 {/* Trust Elements */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     <div className="bg-[#F9F9F9] hover:bg-[#F3F3F3] transition-colors duration-300 rounded-xl p-8 text-center border border-gray-200 shadow-sm">
-                        <div className="text-4xl font-serif text-[#C89574] mb-3">4.5/5</div>
+                        <div className="text-4xl font-serif text-[#FCB63A] mb-3">4.5/5</div>
                         <p className="text-[15px] text-[#1C1C1C] font-semibold mb-1">Average Rating</p>
                         <p className="text-[13px] text-gray-500 font-medium">From 2,500+ reviews</p>
                     </div>
 
                     <div className="bg-[#F9F9F9] hover:bg-[#F3F3F3] transition-colors duration-300 rounded-xl p-8 text-center border border-gray-200 shadow-sm">
-                        <div className="text-4xl font-serif text-[#C89574] mb-3">98%</div>
+                        <div className="text-4xl font-serif text-[#FCB63A] mb-3">98%</div>
                         <p className="text-[15px] text-[#1C1C1C] font-semibold mb-1">Customer Satisfaction</p>
                         <p className="text-[13px] text-gray-500 font-medium">Would recommend us</p>
                     </div>
 
                     <div className="bg-[#F9F9F9] hover:bg-[#F3F3F3] transition-colors duration-300 rounded-xl p-8 text-center border border-gray-200 shadow-sm">
-                        <div className="text-4xl font-serif text-[#C89574] mb-3">50K+</div>
+                        <div className="text-4xl font-serif text-[#FCB63A] mb-3">50K+</div>
                         <p className="text-[15px] text-[#1C1C1C] font-semibold mb-1">Happy Families</p>
                         <p className="text-[13px] text-gray-500 font-medium">Living in our homes</p>
                     </div>

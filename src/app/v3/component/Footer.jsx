@@ -35,7 +35,7 @@ export default function Footer() {
     ];
 
     return (
-        <footer className="bg-[#276290] text-white pt-24 pb-12 overflow-hidden border-t border-white/5">
+        <footer className="bg-zinc-800 text-white pt-24 pb-12 overflow-hidden border-t border-white/5">
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Top Section with Brand and Newsletter-style CTA */}
@@ -51,7 +51,7 @@ export default function Footer() {
                             />
                         </Link>
                         <h3 className="text-3xl md:text-4xl font-semibold mb-6 max-w-md leading-tight">
-                            Building excellence, <span className="text-[#C89574]">defined by you.</span>
+                            Building excellence, <span className="text-[#FCB63A]">defined by you.</span>
                         </h3>
                         <p className="text-gray-00 text-lg max-w-sm">
                             Pioneering world-class living spaces across South India for over two decades.
@@ -60,22 +60,21 @@ export default function Footer() {
                     
                     <div className="lg:pl-12">
                         <div className="bg-white/5 rounded-3xl p-8 border border-white/10 backdrop-blur-sm relative group overflow-hidden">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-[#C89574]/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-[#C89574]/20 transition-colors duration-500"></div>
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-[#FCB63A]/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-[#FCB63A]/20 transition-colors duration-500"></div>
                             <h4 className="text-xl font-bold mb-4 relative z-10">Experience the Casagrand Lifestyle</h4>
                             <p className="text-gray-00 mb-8 relative z-10">Connect with our luxury consultants for exclusive property previews and early bird offers.</p>
                             <div className="flex flex-col sm:flex-row gap-4 relative z-10">
                                 <Link 
                                     href="tel:+919876543210" 
-                                    className="flex items-center justify-center gap-3 bg-[#C89574] hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-2xl transition-all active:scale-95"
+                                    className="flex items-center justify-center gap-3 bg-[#FCB63A] hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-2xl transition-all active:scale-95"
                                 >
                                     <Phone className="w-5 h-5 fill-current" />
-                                    Talk to Us
-                                </Link>
+Enquire Now                                </Link>
                                 <Link 
                                     href="#" 
                                     className="flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-2xl transition-all border border-white/10 active:scale-95"
                                 >
-                                    View Projects
+                                    Download E-Brochure
                                     <ArrowRight className="w-5 h-5" />
                                 </Link>
                             </div>
@@ -87,16 +86,16 @@ export default function Footer() {
                     
                      <div className="space-y-8">
                         <div>
-                            <h4 className="text-sm font-black uppercase tracking-[0.2em] text-[#C89574] mb-6">Contact Presence</h4>
+                            <h4 className="text-sm font-black uppercase tracking-[0.2em] text-[#FCB63A] mb-6">Contact Presence</h4>
                             <div className="space-y-4">
                                 <a href="mailto:info@casagrand.co.in" className="flex items-center gap-4 text-gray-00 hover:text-white transition-colors group">
-                                    <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#C89574]/50">
+                                    <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#FCB63A]/50">
                                         <Mail className="w-4 h-4" />
                                     </div>
                                     <span className="font-medium">info@casagrand.co.in</span>
                                 </a>
                                 <a href="tel:+914444111111" className="flex items-center gap-4 text-gray-00 hover:text-white transition-colors group">
-                                    <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#C89574]/50">
+                                    <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-[#FCB63A]/50">
                                         <Phone className="w-4 h-4" />
                                     </div>
                                     <span className="font-medium">+91 44 4411 1111</span>
@@ -105,10 +104,10 @@ export default function Footer() {
                         </div>
                         
                         <div>
-                            <h4 className="text-sm font-black uppercase tracking-[0.2em] text-[#C89574] mb-6">Social Connect</h4>
+                            <h4 className="text-sm font-black uppercase tracking-[0.2em] text-[#FCB63A] mb-6">Social Connect</h4>
                             <div className="flex gap-3">
                                 {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
-                                    <a key={i} href="#" className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-00 hover:bg-[#C89574] hover:text-black hover:border-[#C89574] transition-all duration-300">
+                                    <a key={i} href="#" className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-00 hover:bg-[#FCB63A] hover:text-black hover:border-[#FCB63A] transition-all duration-300">
                                         <Icon className="w-4 h-4" />
                                     </a>
                                 ))}
@@ -118,7 +117,7 @@ export default function Footer() {
 
                      {sections.map((section, idx) => (
                         <div key={idx}>
-                            <h4 className="text-sm font-black uppercase tracking-[0.2em] text-[#C89574] mb-8">{section.title}</h4>
+                            <h4 className="text-sm font-black uppercase tracking-[0.2em] text-[#FCB63A] mb-8">{section.title}</h4>
                             <ul className="space-y-4">
                                 {section.links.map((link, lIdx) => (
                                     <li key={lIdx}>
@@ -127,7 +126,7 @@ export default function Footer() {
                                             target={link.href.startsWith('http') ? "_blank" : "_self"} 
                                             className="text-gray-00 hover:text-white transition-colors flex items-center gap-2 group"
                                         >
-                                            <span className="w-1 h-1 rounded-full bg-[#C89574] opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                                            <span className="w-1 h-1 rounded-full bg-[#FCB63A] opacity-0 group-hover:opacity-100 transition-opacity"></span>
                                             {link.label}
                                         </Link>
                                     </li>

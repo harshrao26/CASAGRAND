@@ -55,10 +55,10 @@ export default function WhyChooseSection() {
                         return (
                             <div
                                 key={idx}
-                                className="bg-white border border-gray-100 rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:border-[#C89574]/20 transition-all duration-500 group/card cursor-default"
+                                className="bg-white border border-gray-100 rounded-2xl p-8 flex flex-col hover:shadow-2xl hover:border-[#FCB63A]/20 transition-all duration-500 group/card cursor-default"
                             >
-                                <div className="mb-8 h-14 w-14 flex items-center justify-center bg-[#FDF8F4] rounded-xl transition-colors duration-500 group-hover/card:bg-[#C89574]/10">
-                                    <Icon className="w-8 h-8 text-[#C89574] transition-transform duration-500 group-hover/card:scale-110" strokeWidth={1.5} />
+                                <div className="mb-8 h-14 w-14 flex items-center justify-center bg-[#FDF8F4] rounded-xl transition-colors duration-500 group-hover/card:bg-[#FCB63A]/10">
+                                    <Icon className="w-8 h-8 text-[#FCB63A] transition-transform duration-500 group-hover/card:scale-110" strokeWidth={1.5} />
                                 </div>
                                 <h3 className="text-3xl font-semibold font-serif text-[#1C1C1C] mb-4">
                                     {card.title}
@@ -74,7 +74,7 @@ export default function WhyChooseSection() {
 
             {/* Subtle bottom accent line */}
             <div className="max-w-8xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
-                <div className="w-full h-[1px] bg-gradient-to-r from-[#C89574] via-gray-200 to-transparent" />
+                <div className="w-full h-[1px] bg-gradient-to-r from-[#FCB63A] via-gray-200 to-transparent" />
             </div>
         </section>
     );
