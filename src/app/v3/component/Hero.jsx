@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Hero = () => {
     return (
-        <section className="relative pt-40 h-screen w-full overflow-hidden text-white bg-[#326A96]">
+        <section className="relative pt-40 h-screen w-full overflow-hidden text-white bg-[#FDB33A]">
             {/* Background Image */}
             <div className="absolute inset-0  z-0">
                 <Image
@@ -14,8 +14,8 @@ const Hero = () => {
                     priority
                 />
                 {/* Re-designed overlays for V3 luxury look */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#326A96]/60 via-transparent to-[#326A96]/100 z-10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#326A96]/70 via-transparent to-[#326A96]/70 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#FDB33A]/60 via-transparent to-[#FDB33A]/60 z-10" />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-[#FDB33A]/70 via-transparent to-[#FDB33A]/70 z-10" /> */}
             </div>
 
             <div className="relative z-20 h-full w-full flex flex-col items-center justify-e ter px-4">

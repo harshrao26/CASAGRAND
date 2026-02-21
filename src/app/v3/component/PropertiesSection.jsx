@@ -29,17 +29,17 @@ export default function PropertiesSection() {
     };
 
     return (
-        <section ref={propertiesSectionRef} className="md:py-16 py-8  bg-gradient-to-r from-[#326A96] to-[#326A96]">
+        <section ref={propertiesSectionRef} className="md:py-16 py-8  bg-gradient-to-b from-[#FDB33A]/90 to-[#FDB33A]">
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Section Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10">
-                    <div className="max-w-2xl">
+                    <div className="max-w-5xl mx-auto">
                        
-                        <h2 className="text-4xl sm:text-6xl font-serif text-white leading-[1.1] mb-4">
+                        <h2 className="text-4xl sm:text-6xl text-center font-serif text-black leading-[1.1] mb-4">
                             Explore Casagrand Projects in Chennai
                         </h2>
-                        <p className="md:text-lg text-white font-light leading-relaxed">
+                        <p className="md:text-lg text-center text-black font-light leading-relaxed">
                             Discover premium homes across Chennai's fastest-growing residential locations. Detailed project information is available after registration.
                         </p>
                     </div>
@@ -51,10 +51,10 @@ export default function PropertiesSection() {
                     {properties.map((property) => (
                         <div
                             key={property.id}
-                            className="bg-[#0A1C28] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/5 flex flex-col group pb-8"
+                            className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-white/5 flex flex-col group pb-8"
                         >
                             {/* Property Image Container */}
-                            <div className="relative h-64 overflow-hidden rounded-t-xl mb-6">
+                            <div className="relative h-96 overflow-hidden rounded-t-xl mb-6">
                                 {/* NEW Ribbon */}
                                 <div className="absolute top-0 left-6 z-20">
                                     <div className="bg-[#1C8A9B] text-white text-[11px] font-semibold px-4 pt-2 pb-4 [clip-path:polygon(0_0,100%_0,100%_100%,50%_80%,0_100%)] tracking-widest relative shadow-lg">
@@ -76,19 +76,19 @@ export default function PropertiesSection() {
 
                             {/* Property Details */}
                             <div className="px-6 flex-1 flex flex-col">
-                                <h3 className="text-[28px] font-serif text-white mb-2 leading-tight group-hover:text-[#1C8A9B] transition-colors">
+                                <h3 className="text-[28px] font-semibold font-serif text- mb-2 leading-tight group-hover:text-[#1C8A9B] transition-colors">
                                     {property.name}
                                 </h3>
-                                <p className="text-[11px] font-semibold tracking-widest text-white uppercase mb-6">
+                                <p className="text-[11px] font-semibold tracking-widest text- uppercase mb-">
                                     1, 2 AND 3 BED APARTMENTS
                                 </p>
 
-                                <p className="text-[13px] text-white leading-[1.8] font-light mb-8 max-w-[95%]">
+                                <p className="text-[13px] text- leading-[1.8] font-light mb-2 max-w-[95%]">
                                     {property.description}
                                 </p>
 
                                 <div className="mb-6">
-                                    <p className="text-[10px] font-semibold uppercase tracking-widest text-white mb-2">
+                                    <p className="text-[10px] font-semibold uppercase tracking-widest text- mb-2">
                                         STARTING FROM
                                     </p>
                                     <p className="text-[13px] font-bold text-[#D49A36] tracking-wide">
@@ -96,7 +96,7 @@ export default function PropertiesSection() {
                                     </p>
                                 </div>
 
-                                <div className="flex items-center gap-2 text-white mb-10">
+                                <div className="flex items-center gap-2 text-black mb-4">
                                     <MapPin className="w-4 h-4 shrink-0 transition-transform group-hover:scale-110" />
                                     <span className="text-[13px] font-light">{property.location}</span>
                                 </div>
@@ -104,7 +104,7 @@ export default function PropertiesSection() {
                                 <div className="mt-auto">
                                     <button
                                         onClick={() => handleViewDetails(property)}
-                                        className="border border-white hover:bg-white text-white hover:text-[#0A1C28] py-3.5 px-8 rounded-full transition-colors text-[11px] tracking-[0.2em] font-semibold uppercase w-max shadow-sm"
+                                        className="border border-white  bg-[#FDBA4C]  text-black text-[#0A1C28] py-3.5 px-8 rounded-full transition-colors text-[11px] tracking-[0.2em] font-semibold uppercase w-max shadow-sm"
                                     >
                                         Enquire Now
                                     </button>

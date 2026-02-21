@@ -24,7 +24,7 @@ const Header = () => {
         <header 
             className={`fixed top-0 left-0 w-full z-50 py-4 px-6 md:px-12 flex items-center justify-between transition-all duration-500 ${
                 isScrolled 
-                ? 'bg-[#326A96]/90 backdrop-blur-lg border-b border-white/10 py-3 shadow-lg' 
+                ? 'bg-white/90 backdrop-blur-lg border-b border-white/10 py-3 shadow-lg' 
                 : 'bg-transparent border-b border-transparent'
             }`}
         >
@@ -38,7 +38,7 @@ const Header = () => {
                         src="/Casagrand-Logo1.webp"
                         alt="Casagrand Logo"
                         fill
-                        className="object-contain brightness-500"
+                        className="object-contain brightn00"
                         priority
                     />
                 </Link>
