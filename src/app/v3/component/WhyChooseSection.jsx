@@ -39,10 +39,10 @@ export default function WhyChooseSection() {
     return (
         <section className="relative w-full py-16 bg-white overflow-hidden">
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
-                <h2 className="text-3xl md:text-5xl lg:text-[56px] text-[#1C1C1C] mb-4 tracking-tight leading-tight">
+                <h2 className="text-4xl sm:text-7xl text-[#1C1C1C] mb-4 tracking-tight leading-[1.1]">
                     Why Invest in Chennai Real Estate?
                 </h2>
-                <p className="text-sm md:text-base text-gray-600 font-medium tracking-wide max-w-3xl mx-auto">
+                <p className="md:text-2xl text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto">
                     Chennai continues to be one of India’s most stable and high-potential real estate markets, driven by strong IT growth, infrastructure development, and consistent demand from end-users and investors.
                 </p>
             </div>
@@ -60,10 +60,10 @@ export default function WhyChooseSection() {
                                 <div className="mb-8 h-14 w-14 flex items-center justify-center bg-[#FDF8F4] rounded-xl transition-colors duration-500 group-hover/card:bg-[#FCB63A]/10">
                                     <Icon className="w-8 h-8 text-[#FCB63A] transition-transform duration-500 group-hover/card:scale-110" strokeWidth={1.5} />
                                 </div>
-                                <h3 className="text-3xl font-semibold text-[#1C1C1C] mb-4">
+                                <h3 className="text-[28px] font-semibold text-[#1C1C1C] mb-2 leading-tight group-hover:text-[#1C8A9B] transition-colors">
                                     {card.title}
                                 </h3>
-                                <p className="text-lg text-gray-600 leading-relaxed">
+                                <p className="md:text-2xl text-xl text-gray-600 leading-relaxed">
                                     {card.desc}
                                 </p>
                             </div>

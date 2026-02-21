@@ -25,10 +25,10 @@ export default function TestimonialsSection() {
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-16 md:mb-24">
-                    <h2 className="text-4xl md:text-5xl lg:text-[56px] text-[#1C1C1C] mb-6 leading-tight">
+                    <h2 className="text-4xl sm:text-7xl text-center text-[#1C1C1C] mb-4 leading-[1.1]">
                         What Our Homebuyers Say
                     </h2>
-                    <p className="text-sm md:text-base text-gray-600 font-medium tracking-wide max-w-2xl mx-auto">
+                    <p className="md:text-2xl text-xl text-center text-gray-600 leading-relaxed max-w-4xl mx-auto">
                         Don't just take our word for it - hear from thousands of satisfied homeowners who
                         trusted Casagrand for their dream home.
                     </p>
@@ -38,7 +38,7 @@ export default function TestimonialsSection() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
                         {videoTestimonials.map((video) => (
                             <div key={video.id} className="flex flex-col gap-4">
-                                <div 
+                                <div
                                     className="relative aspect-video rounded-2xl overflow-hidden shadow-2xl group border border-gray-100 bg-gray-100"
                                 >
                                     <iframe

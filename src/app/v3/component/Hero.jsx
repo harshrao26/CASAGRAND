@@ -21,14 +21,11 @@ const Hero = () => {
             <div className="relative z-20 h-full w-full flex flex-col items-center justify-e ter px-4">
                 {/* Main Content */}
                 <div className="max-w-7xl w-full text-center mb-12 animate-fade-in-up">
-                    <h1 className="text-6xl md:text-7xl font-semibold mb-4 leading-tighter text-white drop-shadow-2xl">
+                    <h1 className="text-4xl sm:text-7xl font-semibold mb-4 leading-[1.1] text-white drop-shadow-2xl">
                         Explore Premium Homes in Chennai
-
                     </h1>
-                    <p className="text-lg max-w-2xl md:text-xl mx-auto font-semibold tracking-wide text-gray-00 opacity0 drop-shadow-md lg:leading-relaxed">
+                    <p className="md:text-2xl text-xl max-w-3xl mx-auto font-semibold tracking-wide text-white drop-shadow-md leading-relaxed">
                         Compare 5+ Casagrand Residential Projects in Chennai and get instant access to floor plans, pricing, and limited-period offers.
-
-
                     </p>
                 </div>
 

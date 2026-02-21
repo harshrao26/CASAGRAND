@@ -39,7 +39,7 @@ export default function PropertiesSection() {
                         <h2 className="text-4xl sm:text-7xl text-center  text-black leading-[1.1] mb-4">
                             Explore Casagrand Projects in Chennai
                         </h2>
-                        <p className="md:text-2xl text-xl text-center text-black font- leading-relaxed">
+                        <p className="md:text-2xl text-xl text-center text-black leading-relaxed">
                             Discover premium homes across Chennai's fastest-growing residential locations. Detailed project information is available after registration.
                         </p>
                     </div>
@@ -75,7 +75,7 @@ export default function PropertiesSection() {
 
                             {/* Property Details */}
                             <div className="px-6 flex-1 flex flex-col">
-                                <h3 className="text-[28px] font-semibold text- mb-2 leading-tight group-hover:te xt-[#1C8A9B] transition-colors">
+                                <h3 className="text-[28px] font-semibold text- mb-2 leading-tight group-hover:text-[#1C8A9B] transition-colors">
                                     {property.name}
                                 </h3>
                                 <p className="text-[11px] font-semibold tracking-widest text- uppercase mb-">

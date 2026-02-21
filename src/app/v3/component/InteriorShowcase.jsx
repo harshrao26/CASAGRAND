@@ -33,8 +33,8 @@ const InteriorShowcase = () => {
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12 md:mb-16 text-center">
-                    <h2 className="text-3xl md:text-5xl lg:text-[56px] text-[#1C1C1C] mb-4 tracking-tight leading-tight">
-                        Your Home, Quietly Perfected with 231 Standards
+                    <h2 className="text-4xl sm:text-7xl text-[#1C1C1C] mb-12 tracking-tight leading-[1.1]">
+                        Your Home, Quietly Perfected with <span className="text-[#FCB63A]">231 Standards</span>
                     </h2>
                 </div>
                 {isInView && (

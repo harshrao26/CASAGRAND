@@ -39,7 +39,7 @@ export default function FAQSection() {
 
                     {/* Left: Title */}
                     <div className="lg:w-1/3 shrink-0">
-                        <h2 className="text-4xl md:text-5xl lg:text-[64px] text-[#1C1C1C]">
+                        <h2 className="text-4xl sm:text-7xl text-[#1C1C1C] leading-[1.1]">
                             FAQs
                         </h2>
                     </div>
@@ -51,19 +51,19 @@ export default function FAQSection() {
                             return (
                                 <div
                                     key={idx}
-                                    className="border border-gray-200 bg-[#F9F9F9] hover:bg-[#F3F3F3] rounded-md overflow-hidden transition-colors duration-300"
+                                    className="border border-gray-200 bg-[#FCB63A]/50 hover:bg-[#F3 F3F3] rounded-md overflow-hidden transition-colors duration-300"
                                 >
                                     <button
                                         onClick={() => toggleFaq(idx)}
                                         className="w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none"
                                     >
                                         <div className="flex items-start gap-4 pr-4">
-                                            <div className="shrink-0 mt-0.5">
-                                                <span className="inline-flex items-center justify-center w-8 h-8 rounded bg-[#FCB63A] text-white text-xs font-semibold">
+                                            <div className="shrink-0 mt-.5">
+                                                <span className="inline-flex items-center justify-center w-8 h-8 rounded bg-[#FCB63A] text-black text-xs font-semibold">
                                                     Q{idx + 1}
                                                 </span>
                                             </div>
-                                            <span className="text-[15px] md:text-base font-medium text-[#1C1C1C] leading-snug">
+                                            <span className="text-[15px]   md:text-base font-medium text-[#1C1C1C] leading-snug">
                                                 {faq.question}
                                             </span>
                                         </div>
@@ -73,9 +73,9 @@ export default function FAQSection() {
                                     </button>
 
                                     <div
-                                        className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+                                        className={`overflow-hidden bg-[#F3F3F3] transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
                                     >
-                                        <div className="p-5 md:p-6 pt-0 text-sm md:text-[15px] text-gray-600 leading-relaxed border-t border-gray-200/50 mt-2">
+                                        <div className="p-5 md:p-6 pt-0 text-sm md:text-[15px] text-gray-800 leading-relaxed border-t border-gray-200/50 mt-2">
                                             {faq.answer}
                                         </div>
                                     </div>
