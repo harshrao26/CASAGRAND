@@ -21,11 +21,11 @@ const Hero = () => {
             <div className="relative z-20 h-full w-full flex flex-col items-center justify-e ter px-4">
                 {/* Main Content */}
                 <div className="max-w-7xl w-full text-center mb-12 animate-fade-in-up">
-                    <h1 className="text-6xl md:text-7xl font-serif mb-4 leading-tighter text-white drop-shadow-2xl">
+                    <h1 className="text-6xl md:text-7xl font-semibold font-serif mb-4 leading-tighter text-white drop-shadow-2xl">
                       Explore Premium Homes in Chennai
 
                     </h1>
-                    <p className="text-lg max-w-2xl md:text-xl mx-auto tracking-wide text-gray-00 opacity0 drop-shadow-md lg:leading-relaxed">
+                    <p className="text-lg max-w-2xl md:text-xl mx-auto font-semibold tracking-wide text-gray-00 opacity0 drop-shadow-md lg:leading-relaxed">
                       Compare 5+ Casagrand Residential Projects in Chennai and get instant access to floor plans, pricing, and limited-period offers.
 
 
@@ -36,7 +36,7 @@ const Hero = () => {
                 <div className="w-full z-30 max-w-5xl bg-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-gray-100 p-6 md:p-8 rounded-2xl animate-fade-in-up">
                     <form className="flex flex-col md:grid md:grid-cols-4 gap-6 items-end">
                         <div className="flex flex-col items-start w-full text-left">
-                            <label className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 text-gray-500">Full Name</label>
+                            <label className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 text-gray-800">Full Name</label>
                             <input 
                                 type="text" 
                                 placeholder="Enter your name" 
@@ -44,7 +44,7 @@ const Hero = () => {
                             />
                         </div>
                         <div className="flex flex-col items-start w-full text-left">
-                            <label className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 text-gray-500">Email Address</label>
+                            <label className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 text-gray-800">Email Address</label>
                             <input 
                                 type="email" 
                                 placeholder="your.email@example.com" 
@@ -52,7 +52,7 @@ const Hero = () => {
                             />
                         </div>
                         <div className="flex flex-col items-start w-full text-left">
-                            <label className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 text-gray-500">Phone Number</label>
+                            <label className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 text-gray-800">Phone Number</label>
                             <input 
                                 type="tel" 
                                 placeholder="+91 98765 43210" 
@@ -61,9 +61,9 @@ const Hero = () => {
                         </div>
                         <button 
                             type="button" 
-                            className="w-full bg-[#C89574] hover:bg-[#b08264] text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg active:scale-95 uppercase tracking-[0.2em] text-xs h-[58px]"
+                            className="w-full bg-[#FCB63A] hover:bg-[#FCB63A]/80 text-black font-bold px-8 py-4 rounded-xl transition-all shadow-lg active:scale-95 uppercase tracking-[0.2em] text-xs h-[58px]"
                         >
-                            Inquire Now
+                            Enquire Now
                         </button>
                     </form>
                 </div>
