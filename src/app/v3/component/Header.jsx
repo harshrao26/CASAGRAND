@@ -84,7 +84,7 @@ const Header = () => {
 
                         {/* Modal Content */}
                         <div className="text-center mb-6">
-                            <h3 className="text-2xl font-bold text-gray-900 mb-2 font-serif">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-2">
                                 Get In Touch
                             </h3>
                             <p className="text-gray-600 text-sm">

@@ -34,20 +34,19 @@ export default function PropertiesSection() {
 
                 {/* Section Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10">
-                    <div className="max-w-5xl mx-auto">
+                    <div className="max-w-5xl mx-auto ">
                        
-                        <h2 className="text-4xl sm:text-6xl text-center font-serif text-black leading-[1.1] mb-4">
+                        <h2 className="text-4xl sm:text-7xl text-center  text-black leading-[1.1] mb-4">
                             Explore Casagrand Projects in Chennai
                         </h2>
-                        <p className="md:text-lg text-center text-black font-light leading-relaxed">
+                        <p className="md:text-2xl text-xl text-center text-black font- leading-relaxed">
                             Discover premium homes across Chennai's fastest-growing residential locations. Detailed project information is available after registration.
                         </p>
                     </div>
-                    
                 </div>
 
                 {/* Property Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 mt-20 lg:grid-cols-3 gap-8">
                     {properties.map((property) => (
                         <div
                             key={property.id}
@@ -76,7 +75,7 @@ export default function PropertiesSection() {
 
                             {/* Property Details */}
                             <div className="px-6 flex-1 flex flex-col">
-                                <h3 className="text-[28px] font-semibold font-serif text- mb-2 leading-tight group-hover:text-[#1C8A9B] transition-colors">
+                                <h3 className="text-[28px] font-semibold text- mb-2 leading-tight group-hover:te xt-[#1C8A9B] transition-colors">
                                     {property.name}
                                 </h3>
                                 <p className="text-[11px] font-semibold tracking-widest text- uppercase mb-">
@@ -104,7 +103,7 @@ export default function PropertiesSection() {
                                 <div className="mt-auto">
                                     <button
                                         onClick={() => handleViewDetails(property)}
-                                        className="border border-white  bg-[#FDBA4C]  text-black text-[#0A1C28] py-3.5 px-8 rounded-full transition-colors text-[11px] tracking-[0.2em] font-semibold uppercase w-max shadow-sm"
+                                        className="border border-white  bg-[#FDBA4C]  text-black py-3.5 px-8 rounded-full transition-colors text-[11px] tracking-[0.2em] font-semibold uppercase w-max shadow-sm"
                                     >
                                         Enquire Now
                                     </button>
@@ -125,7 +124,7 @@ export default function PropertiesSection() {
                     />
 
                     {/* Modal Content */}
-                    <div className="bg-white   max-w-2xl w-full   relative z-100 shadow-[0_100px_200px_-50px_rgba(0,0,0,0.4)] border border-gray-100 animate-fade-in-up flex flex-col items-center">
+                    <div className="bg-white   max-w-2xl w-full   relative z-10 shadow-[0_100px_200px_-50px_rgba(0,0,0,0.4)] border border-gray-100 animate-fade-in-up flex flex-col items-center">
                         {/* Close Button */}
                         <button
                             onClick={() => setShowModal(false)}
@@ -136,15 +135,10 @@ export default function PropertiesSection() {
                             </svg>
                         </button>
 
-                        
-
                         {/* Integrated Lead Form Container */}
                         <div className="w-full bg-gray-50/50 p-6 sm:p-8 rounded-[3rem] border border-gray-100 relative group/form transition-all duration-500 hover:border-yellow-200 hover:bg-white shadow-sm">
-                             
                             <LeadForm />
                         </div>
-
-                       
                     </div>
                 </div>
             )}

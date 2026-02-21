@@ -39,7 +39,7 @@ export default function FAQSection() {
 
                     {/* Left: Title */}
                     <div className="lg:w-1/3 shrink-0">
-                        <h2 className="text-4xl md:text-5xl lg:text-[64px] font-serif text-[#1C1C1C]">
+                        <h2 className="text-4xl md:text-5xl lg:text-[64px] text-[#1C1C1C]">
                             FAQs
                         </h2>
                     </div>

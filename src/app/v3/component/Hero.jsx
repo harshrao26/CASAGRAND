@@ -21,12 +21,12 @@ const Hero = () => {
             <div className="relative z-20 h-full w-full flex flex-col items-center justify-e ter px-4">
                 {/* Main Content */}
                 <div className="max-w-7xl w-full text-center mb-12 animate-fade-in-up">
-                    <h1 className="text-6xl md:text-7xl font-semibold font-serif mb-4 leading-tighter text-white drop-shadow-2xl">
-                      Explore Premium Homes in Chennai
+                    <h1 className="text-6xl md:text-7xl font-semibold mb-4 leading-tighter text-white drop-shadow-2xl">
+                        Explore Premium Homes in Chennai
 
                     </h1>
                     <p className="text-lg max-w-2xl md:text-xl mx-auto font-semibold tracking-wide text-gray-00 opacity0 drop-shadow-md lg:leading-relaxed">
-                      Compare 5+ Casagrand Residential Projects in Chennai and get instant access to floor plans, pricing, and limited-period offers.
+                        Compare 5+ Casagrand Residential Projects in Chennai and get instant access to floor plans, pricing, and limited-period offers.
 
 
                     </p>
@@ -37,30 +37,30 @@ const Hero = () => {
                     <form className="flex flex-col md:grid md:grid-cols-4 gap-6 items-end">
                         <div className="flex flex-col items-start w-full text-left">
                             <label className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 text-gray-800">Full Name</label>
-                            <input 
-                                type="text" 
-                                placeholder="Enter your name" 
-                                className="w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium" 
+                            <input
+                                type="text"
+                                placeholder="Enter your name"
+                                className="w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium"
                             />
                         </div>
                         <div className="flex flex-col items-start w-full text-left">
                             <label className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 text-gray-800">Email Address</label>
-                            <input 
-                                type="email" 
-                                placeholder="your.email@example.com" 
-                                className="w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium" 
+                            <input
+                                type="email"
+                                placeholder="your.email@example.com"
+                                className="w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium"
                             />
                         </div>
                         <div className="flex flex-col items-start w-full text-left">
                             <label className="text-[10px] font-bold uppercase tracking-[0.2em] mb-2 text-gray-800">Phone Number</label>
-                            <input 
-                                type="tel" 
-                                placeholder="+91 98765 43210" 
-                                className="w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium" 
+                            <input
+                                type="tel"
+                                placeholder="+91 98765 43210"
+                                className="w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium"
                             />
                         </div>
-                        <button 
-                            type="button" 
+                        <button
+                            type="button"
                             className="w-full bg-[#FCB63A] hover:bg-[#FCB63A]/80 text-black font-bold px-8 py-4 rounded-xl transition-all shadow-lg active:scale-95 uppercase tracking-[0.2em] text-xs h-[58px]"
                         >
                             Enquire Now
