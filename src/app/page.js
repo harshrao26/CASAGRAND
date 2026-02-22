@@ -1,29 +1,33 @@
-'use client';
-
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import WhyChooseSection from "@/components/WhyChooseSection";
-import PropertiesSection from "@/components/PropertiesSection";
-import BenefitsSection from "@/components/BenefitsSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
-import LeadMagnetSection from "@/components/LeadMagnetSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-import Footer from "@/components/Footer";
-import StickyFooter from "@/components/StickyFooter";
+import React from "react";
+import { Poppins } from "next/font/google";
+import Header from "@/app/v3/component/Header";
+import Hero from "@/app/v3/component/Hero";
+import PropertiesSection from "@/app/v3/component/PropertiesSection";
+import InteriorShowcase from "@/app/v3/component/InteriorShowcase";
+import WhyChooseSection from "@/app/v3/component/WhyChooseSection";
+import FAQSection from "@/app/v3/component/FAQSection";
 import { ProjectProvider } from "@/context/ProjectContext";
+import TestimonialsSection from "@/app/v3/component/TestimonialsSection";
+import Footer from "@/app/v3/component/Footer";
+import StickyFooter from "@/app/v3/component/StickyFooter";
+
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export default function Home() {
   return (
     <ProjectProvider>
-      <main className="min-h-screen">
+      <main className={`${poppins.className} relative min-h-screen`}>
         <Header />
-        <HeroSection />
-        <WhyChooseSection />
+        <Hero />
         <PropertiesSection />
-        <BenefitsSection />
-        <HowItWorksSection />
-        <LeadMagnetSection />
+        <WhyChooseSection />
+        <InteriorShowcase />
         <TestimonialsSection />
+        <FAQSection />
         <Footer />
         <StickyFooter />
       </main>

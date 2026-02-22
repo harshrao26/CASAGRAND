@@ -21,7 +21,7 @@ const Hero = () => {
             <div className="relative z-20 h-full w-full flex flex-col items-center justify-e ter px-4">
                 {/* Main Content */}
                 <div className="max-w-7xl w-full text-center mb-12 animate-fade-in-up">
-                    <h1 className="text-4xl sm:text-6xl font-semibold mb-4 leading-[1.1] text-white drop-shadow-2xl">
+                    <h1 className="text-[39px] sm:text-6xl font-semibold mb-4 leading-[1.1] text-white drop-shadow-2xl">
                         Explore Premium Homes in Chennai
                     </h1>
                     <p className="md:text-xl text-lg max-w-3xl mx-auto font-semibold trackin g-wide text-white drop-shad ow-md leading-relaxed">
