@@ -42,7 +42,7 @@ export default function PropertiesSection() {
                         <h2 className="text-4xl sm:text-6xl font-semibold text-gray-900 leading-[1.1] mb-4">
                             Explore Casagrand Projects   in Chennai
                         </h2>
-                        <p className="md:text-lg text-gray-500 font-medium leading-relaxed">
+                        <p className="md:text-lg text text-gray-500 font-medium leading-relaxed">
                             Discover premium homes across Chennai's fastest-growing residential locations. Detailed project information is available after registration.
 
                         </p>

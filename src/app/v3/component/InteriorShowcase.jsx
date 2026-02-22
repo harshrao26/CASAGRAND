@@ -37,30 +37,17 @@ const InteriorShowcase = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative w-full py-20 bg-white"
+            className="relative w-full py-10 bg-white"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="mb-12 md:mb-16 text-center">
-                    <h2 className="text-4xl sm:text-7xl text-[#1C1C1C] mb-6 tracking-tight leading-[1.1]">
-                        Why Homebuyers Trust <span className="text-[#FCB63A]">Casagrand</span>
+                    <h2 className="text-4xl sm:text-5xl text-[#1C1C1C] mb-6 tracking-tight leading-[1.1]">
+                        Your Home, Quietly Perfected with <span className="text-[#FCB63A]">231 Standards</span>
                     </h2>
-                    <p className="md:text-2xl text-xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-12">
-                        Casagrand is one of South India's most trusted real estate developers, known for delivering high-quality homes that combine thoughtful design, modern amenities, and long-term value.
-                    </p>
+                     
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-20 text-center">
-                    {trustStats.map((stat, idx) => (
-                        <div key={idx} className="flex flex-col gap-1">
-                            <span className="text-3xl md:text-4xl font-bold text-[#FCB63A]">
-                                {stat.value}
-                            </span>
-                            <span className="text-xs md:text-sm font-semibold text-gray-500 uppercase tracking-widest">
-                                {stat.label}
-                            </span>
-                        </div>
-                    ))}
-                </div>
+               
 
                 {isInView && (
                     <div className="relative aspect-video w-full rounded-[40px] md:rounded-[80px] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.25)] border border-gray-100">

@@ -28,7 +28,7 @@ export default function StickyFooter() {
                     }`}
             >
                 <div className="max-w-4xl mx-auto px-4">
-                    <div className="grid grid-cols-3 gap-4 p-3 pb-6 md:pb-3">
+                    <div className="grid grid-cols-3 gap-4 p-3 pb- md:pb-3">
                     
 
                     <a
@@ -38,7 +38,7 @@ export default function StickyFooter() {
                         className="flex flex-col items-center justify-center gap-1.5 bg-white hover:bg-white/10 text-white py-3 rounded-xl border border-white/10 transition-all active:scale-95"
                     >
                         <MessageCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-[18px] font-bold uppercase text-black tracking-wider">Chat</span>
+                        <span className="text-sm md:text-[18px] font-bold  text-black wider">Chat</span>
                     </a>
 
                     <button
@@ -46,7 +46,7 @@ export default function StickyFooter() {
                         className="flex flex-col items-center justify-center gap-1.5 bg-[#FCB63A] hover:bg-[#B68465] text-white py-3 rounded-xl shadow-lg transition-all active:scale-95"
                     >
                         <Download className="w-4 h-4" />
-                        <span className="text-[18px] font-bold uppercase tracking-wider">Brochure</span>
+                        <span className="text-sm md:text-[18px] font-bold  wider">Brochure</span>
                     </button>
 
                     <button
@@ -54,7 +54,7 @@ export default function StickyFooter() {
                         className="flex flex-col items-center justify-center gap-1.5 bg-white text-black py-3 rounded-xl shadow-lg transition-all active:scale-95"
                     >
                         <Mail className="w-4 h-4" />
-                        <span className="text-[18px] font-bold uppercase tracking-wider">Enquire</span>
+                        <span className="text-sm md:text-[18px] font-bold  wider">Enquire</span>
                     </button>
                     </div>
                 </div>

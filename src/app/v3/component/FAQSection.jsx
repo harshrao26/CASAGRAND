@@ -4,20 +4,44 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
     {
-        question: "Is Casagrand a reliable builder in Chennai?",
-        answer: "With over two decades of excellence, Casagrand is one of South India's leading real estate developers. We have delivered over 140+ projects and are trusted by 50,000+ happy families, known for our commitment to quality and on-time delivery."
+        question: "Why should I buy a home in Chennai?",
+        answer: "Chennai offers strong IT growth, metro connectivity, and steady property appreciation. It's ideal for families and professionals due to its schools, hospitals, and job hubs."
     },
     {
-        question: "Are all Casagrand projects in Chennai RERA compliant?",
-        answer: "Yes, absolute transparency is our core value. Every Casagrand project is registered with the Tamil Nadu Real Estate Regulatory Authority (TNRERA), ensuring that all project details, timelines, and legalities are strictly followed and accessible to our buyers."
+        question: "Is investing near OMR (Old Mahabalipuram Road) worth it?",
+        answer: "OMR is Chennai's prime IT corridor with high rental demand. Upcoming infrastructure and commercial growth make it a smart long-term investment choice."
     },
     {
-        question: "What makes Casagrand residential projects unique?",
-        answer: "Our projects are 'Designed for Life.' We focus on providing 40+ superior amenities in every project, high-quality finishes, maximum ventilation (Vastu compliant), and strategic locations near major IT and industrial corridors, ensuring great rental potential."
+        question: "Are Casagrand Chennai projects RERA approved?",
+        answer: "Yes, all Casagrand projects in Chennai are RERA-registered and approved by the Tamil Nadu Real Estate Regulatory Authority (TNRERA). You can buy your dream home with confidence, ensuring complete transparency and legal compliance."
     },
     {
-        question: "Does Casagrand offer flexible payment options for homebuyers?",
-        answer: "We offer several attractive payment structures, including construction-linked plans and tie-ups with leading financial institutions for easy home loans, making it convenient for both first-time homebuyers and seasoned investors to secure their dream home."
+        question: "How do I book a site visit?",
+        answer: "Just submit your details through the enquiry form, and our sales team will get in touch to coordinate a free site visit at your convenience. For our NRI customers, a virtual site tour can also be arranged based on your preferred date and time."
+    },
+    {
+        question: "How long will the offer price be available?",
+        answer: "The offer price is valid for a limited period and is subject to availability. We recommend scheduling a site visit at the earliest to secure the current pricing and benefits."
+    },
+    {
+        question: "Can I book my dream home by paying an advance/deposit to confirm?",
+        answer: "Yes, you can book your preferred unit by paying a booking amount (advance). Once the payment is made, the unit will be reserved for you, subject to terms and conditions. Our sales team will guide you through the booking process and share the payment details."
+    },
+    {
+        question: "Is the site visit free and how can I schedule one?",
+        answer: "Yes, the site visit is completely free of cost with no obligation to book. You can schedule your visit by filling out the enquiry form. Our sales team will assist you in arranging the free site visit and confirm your preferred date and time."
+    },
+    {
+        question: "How many members are allowed for a site visit?",
+        answer: "You may bring up to 3–4 family members for the site visit. We recommend bringing key decision-makers to make the most of your visit."
+    },
+    {
+        question: "When will the project be handed over?",
+        answer: "Handover timelines vary by project. Estimated completion dates are clearly mentioned in the agreement and marketing materials."
+    },
+    {
+        question: "How can I track construction progress?",
+        answer: "Buyers receive: Regular construction updates, Site visit opportunities, Photo/video progress reports, and Dedicated relationship manager support."
     }
 ];
 
@@ -39,7 +63,7 @@ export default function FAQSection() {
 
                     {/* Left: Title */}
                     <div className="lg:w-1/3 shrink-0">
-                        <h2 className="text-4xl sm:text-7xl text-[#1C1C1C] leading-[1.1]">
+                        <h2 className="text-4xl sm:text-5xl text-[#1C1C1C] leading-[1.1]">
                             FAQs
                         </h2>
                     </div>

@@ -1,9 +1,14 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Facebook, Instagram, Twitter, Linkedin, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import LeadForm from '@/app/v3/component/LeadForm';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
+    const [showModal, setShowModal] = useState(false);
 
     const sections = [
         {
@@ -35,21 +40,22 @@ export default function Footer() {
     ];
 
     return (
+        <>
         <footer className="bg-zinc-800 text-white pt-24 pb-12 overflow-hidden border-t border-white/5">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                 <Link href="/" className="inline-block mb-10 transition-opacity hover:opacity-80">
-                            <Image
-                                src="/Casagrand-Logo1.webp"
-                                alt="Casagrand Logo"
-                                width={180}
-                                height={45}
-                                className="h-16 w-auto brightness-0 invert"
-                            />
-                        </Link>
+                <Link href="/" className="inline-block mb-10 transition-opacity hover:opacity-80">
+                    <Image
+                        src="/Casagrand-Logo1.webp"
+                        alt="Casagrand Logo"
+                        width={180}
+                        height={45}
+                        className="h-16 w-auto brightness-0 invert"
+                    />
+                </Link>
                 {/* Top Section with Brand and Newsletter-style CTA */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 pb-20 border-b border-white/5 items-start">
                     <div>
-                       
+
                         <h3 className="text-3xl md:text-4xl font-semibold mb-6 max-w-md leading-tight">
                             Building excellence, <span className="text-[#FCB63A]">defined by you.</span>
                         </h3>
@@ -57,32 +63,32 @@ export default function Footer() {
                             Pioneering world-class living spaces across South India for over two decades.
                         </p>
                     </div>
-                    
+
                     <div className="lg:pl-12">
                         <div className="bg-white/5 rounded-3xl p-8 border border-white/10 backdrop-blur-sm relative group overflow-hidden">
                             <div className="absolute top-0 right-0 w-32 h-32 bg-[#FCB63A]/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-[#FCB63A]/20 transition-colors duration-500"></div>
                             <h4 className="text-2xl font-semibold mb-4 relative z-10">Experience the Casagrand Lifestyle</h4>
                             <p className="text-gray-00 mb-8 relative z-10">Connect with our luxury consultants for exclusive property previews and early bird offers.</p>
                             <div className="flex flex-col sm:flex-row gap-4 relative z-10">
-                                <Link 
-                                    href="tel:+919876543210" 
+                                <button
+                                    onClick={() => setShowModal(true)}
                                     className="flex items-center justify-center gap-3 bg-[#FCB63A] hover:bg-yellow-600 text-black font-semibold py-4 px-8 rounded-2xl transition-all active:scale-95"
                                 >
-                                    <Phone className="w-5 h-5 fill-current" />
-Enquire Now                                </Link>
-                                <Link 
-                                    href="#" 
+                                    Enquire Now
+                                </button>
+                                <button
+                                    onClick={() => setShowModal(true)}
                                     className="flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-2xl transition-all border border-white/10 active:scale-95"
                                 >
                                     Download E-Brochure
                                     <ArrowRight className="w-5 h-5" />
-                                </Link>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                 {/* <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+                {/* <div className="py-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
                     
                      <div className="space-y-8">
                         <div>
@@ -149,5 +155,32 @@ Enquire Now                                </Link>
                 </div>
             </div>
         </footer>
+
+            {/* Lead Form Modal — same as Header */}
+            {showModal && (
+                <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60] flex items-center justify-center p-4">
+                    <div className="bg-white rounded-2xl max-w-md w-full p-8 relative shadow-2xl animate-in fade-in zoom-in duration-200">
+                        {/* Close Button */}
+                        <button
+                            onClick={() => setShowModal(false)}
+                            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+
+                        {/* Modal Content */}
+                        <div className="text-center mb-6">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-2">Get In Touch</h3>
+                            <p className="text-gray-600 text-sm">Fill in your details and our experts will contact you shortly</p>
+                        </div>
+
+                        {/* Lead Form */}
+                        <LeadForm />
+                    </div>
+                </div>
+            )}
+        </>
     );
 }
