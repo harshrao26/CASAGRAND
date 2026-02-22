@@ -77,7 +77,7 @@ export default function Hero() {
       </div>
 
       {/* Content Container */}
-      <div className="relative  z-30 mx-auto max-w-8xl px-6 sm:px-8 pt-20 pb-16 w-full">
+      <div className="relative  z-30 mx-auto max-w-7xl px-6 sm:px-8 pt-20 pb-16 w-full">
 
         {/* Grid Layout for Desktop */}
         <div className="grid grid-cols-1 pt-10 lg:grid-cols-12 gap-8 lg:gap-12 items-center">

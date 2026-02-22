@@ -35,7 +35,7 @@ export default function LeadMagnetSection() {
                 <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-yellow-600/5 rounded-full blur-[100px]" />
             </div>
 
-            <div className="relative z-10 max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
                     
                     {/* Left Content */}

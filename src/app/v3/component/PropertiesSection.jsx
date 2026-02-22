@@ -30,12 +30,12 @@ export default function PropertiesSection() {
 
     return (
         <section ref={propertiesSectionRef} className="md:py-16 py-8  bg-gradient-to-b from-[#FDB33A]/90 to-[#FDB33A]">
-            <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Section Header */}
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-10">
                     <div className="max-w-5xl mx-auto ">
-                       
+
                         <h2 className="text-4xl sm:text-7xl text-center  text-black leading-[1.1] mb-4">
                             Explore Casagrand Projects in Chennai
                         </h2>
@@ -57,8 +57,9 @@ export default function PropertiesSection() {
                                 {/* NEW Ribbon */}
                                 <div className="absolute top-0 left-6 z-20">
                                     <div className="bg-[#1C8A9B] text-white text-[11px] font-semibold px-4 pt-2 pb-4 [clip-path:polygon(0_0,100%_0,100%_100%,50%_80%,0_100%)] tracking-widest relative shadow-lg">
-                                        NEW
-                                        <div className="absolute top-0 -left-2 w-2 h-2 bg-[#105661] [clip-path:polygon(100%_0,100%_100%,0_100%)]" />
+
+                                        {property.label}
+                                      <div className="absolute top-0 -left-2 w-2 h-2 bg-[#105661] [clip-path:polygon(100%_0,100%_100%,0_100%)]" />
                                     </div>
                                 </div>
 
@@ -75,37 +76,62 @@ export default function PropertiesSection() {
 
                             {/* Property Details */}
                             <div className="px-6 flex-1 flex flex-col">
-                                <h3 className="text-[28px] font-semibold text- mb-2 leading-tight group-hover:text-[#1C8A9B] transition-colors">
+                                <h3 className="text-2xl font-bold text-black mb-1 leading-tight group-hover:text-[#1C8A9B] transition-colors tracking-tight">
                                     {property.name}
                                 </h3>
-                                <p className="text-[11px] font-semibold tracking-widest text- uppercase mb-">
-                                    1, 2 AND 3 BED APARTMENTS
+                                <p className="text-[13px] font-bold tracking-[0.15em] text-black uppercase mb-5">
+                                    {property.configuration || "1, 2 AND 3 BED APARTMENTS"}
                                 </p>
 
-                                <p className="text-[13px] text- leading-[1.8] font-light mb-2 max-w-[95%]">
-                                    {property.description}
-                                </p>
+                               
 
-                                <div className="mb-6">
-                                    <p className="text-[10px] font-semibold uppercase tracking-widest text- mb-2">
+                                <div className="mb-4">
+                                    <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-black mb2">
                                         STARTING FROM
                                     </p>
-                                    <p className="text-[13px] font-bold text-[#D49A36] tracking-wide">
+                                    <p className="text-[22px] font-bold text-[#f5a631] tracking-wide">
                                         {property.price}
                                     </p>
                                 </div>
 
-                                <div className="flex items-center gap-2 text-black mb-4">
-                                    <MapPin className="w-4 h-4 shrink-0 transition-transform group-hover:scale-110" />
-                                    <span className="text-[13px] font-light">{property.location}</span>
-                                </div>
+                                <a
+                                    href={property.locationLink}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center gap-2 text-black mb-6 hover:text-[#1C8A9B] transition-colors group/loc"
+                                >
+                                    <MapPin className="w-[18px] h-[18px] shrink-0 transition-transform group-hover/loc:scale-110" strokeWidth={2} />
+                                    <span className="text-[15px] font-medium underline decoration-black decoration-dotted underline-offset-4">View Location</span>
+                                </a>
+
+                                {property.nearby && (
+                                    <div className="mb-4">
+                                        <p className="text-[12px] font-bold uppercase tracking-[0.1em] text-black mb-2">
+                                            NEAR BY
+                                        </p>
+                                        <p className="text-[16px] text-gray-700 leading-snug   font-medium pr-4">
+                                            {property.nearby}
+                                        </p>
+                                    </div>
+                                )}
+
+                                {property.reraNumber && (
+                                    <div className="mb-4 flex items-center text-[12px] font-bold uppercase tracking-[0.1em] text-gray-500 gap-2">
+                                        <p className="      ">
+                                            RERA NO:
+                                        </p>
+                                        <p className=" ">
+                                            {property.reraNumber}
+                                        </p>
+                                    </div>
+                                )}
 
                                 <div className="mt-auto">
                                     <button
                                         onClick={() => handleViewDetails(property)}
-                                        className="border border-white  bg-[#FDBA4C]  text-black py-3.5 px-8 rounded-full transition-colors text-[11px] tracking-[0.2em] font-semibold uppercase w-max shadow-sm"
+                                        className="border border-white bg-[#fca326] hover:bg-[#e09121] text-black py-4 px-8 rounded-[40px] transition-all text-[15px] trac king-[0.15em] font-bold   w-full shadow-sm active:scale-95"
                                     >
-                                        Enquire Now
+                                        {property.ctaText || "Enquire Now"}
                                     </button>
                                 </div>
                             </div>

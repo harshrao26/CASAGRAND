@@ -36,7 +36,7 @@ export default function Footer() {
 
     return (
         <footer className="bg-[#276290] text-white pt-24 pb-12 overflow-hidden border-t border-white/5">
-            <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 {/* Top Section with Brand and Newsletter-style CTA */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 pb-20 border-b border-white/5 items-start">

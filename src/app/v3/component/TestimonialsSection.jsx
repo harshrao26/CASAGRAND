@@ -22,7 +22,7 @@ const videoTestimonials = [
 export default function TestimonialsSection() {
     return (
         <section className="py-20 bg-white">
-            <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
                 <div className="text-center mb-16 md:mb-24">
                     <h2 className="text-4xl sm:text-7xl text-center text-[#1C1C1C] mb-4 leading-[1.1]">

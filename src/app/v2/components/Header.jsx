@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <header className="fixed z-[1000] top-4 left-1/2 -translate-x-1/2   w-full px-3 md:px-0">
       {/* Floating pill container */}
-      <div className="mx-auto max-w-8xl ">
+      <div className="mx-auto max-w-7xl ">
         <div className="relative bg-white/90 py-1 flex items-center justify-between rounded-full   text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)] ring-1 rin g-black/30 backdrop-blur-md">
 
           {/* Left circular logo/button */}

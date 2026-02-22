@@ -38,7 +38,7 @@ export default function WhyChooseSection() {
 
     return (
         <section className="relative w-full py-16 bg-white overflow-hidden">
-            <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
                 <h2 className="text-4xl sm:text-7xl text-[#1C1C1C] mb-4 tracking-tight leading-[1.1]">
                     Why Invest in Chennai Real Estate?
                 </h2>
@@ -48,7 +48,7 @@ export default function WhyChooseSection() {
             </div>
 
             {/* Grid Container */}
-            <div className="relative w-full max-w-8xl px-4 sm:px-6 lg:px-8 mx-auto">
+            <div className="relative w-full max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {cards.map((card, idx) => {
                         const Icon = card.icon;
@@ -73,7 +73,7 @@ export default function WhyChooseSection() {
             </div>
 
             {/* Subtle bottom accent line */}
-            <div className="max-w-8xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto mt-20 px-4 sm:px-6 lg:px-8">
                 <div className="w-full h-[1px] bg-gradient-to-r from-[#FCB63A] via-gray-200 to-transparent" />
             </div>
         </section>
