@@ -134,7 +134,7 @@ export default function PropertiesSection() {
 
                                 {/* Project Name */}
                                 <h3 className="text-[24px] sm:text-[32px] font-semibold text-black mb-1 sm:mb-3 leading-tight group-hover:text-[#fca326] transition-colors tight">
-                                    {property.name}
+                                   Casagrand {property.name}
                                 </h3>
 
                                 {/* Configuration */}

@@ -40,7 +40,7 @@ const Hero = () => {
             {/* Background Image */}
             <div className="absolute inset-0  z-0">
                 <Image
-                    src="/images/Primrose/day cam - day cam - Casa Platinum_optimized.webp"
+                    src="/images/Elysium/image copy_optimized.webp"
                     alt="Casa Platinum Skyline"
                     fill
                     className="object-cover opacity-200 saturate-200"
