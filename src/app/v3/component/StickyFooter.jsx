@@ -35,26 +35,26 @@ export default function StickyFooter() {
                         href="https://wa.me/919876543210"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex flex-col items-center justify-center gap-1.5 bg-white hover:bg-white/10 text-white py-3 rounded-xl border border-white/10 transition-all active:scale-95"
+                        className="flex flex-col items-center justify-center gap-1 bg-white hover:bg-white/10 text-white py-2 rounded-xl border border-white/10 transition-all active:scale-95"
                     >
-                        <MessageCircle className="w-4 h-4 text-green-500" />
-                        <span className="text-sm md:text-[18px] font-bold  text-black wider">Chat</span>
+                        <MessageCircle className="w-3.5 h-3.5 text-green-500" />
+                        <span className="text-xs md:text-sm font-bold text-black wider">Chat</span>
                     </a>
 
                     <button
                         onClick={() => setShowModal(true)}
-                        className="flex flex-col items-center justify-center gap-1.5 bg-[#FCB63A] hover:bg-[#B68465] text-white py-3 rounded-xl shadow-lg transition-all active:scale-95"
+                        className="flex flex-col items-center justify-center gap-1 bg-[#FCB63A] hover:bg-[#B68465] text-white py-2 rounded-xl shadow-lg transition-all active:scale-95"
                     >
-                        <Download className="w-4 h-4" />
-                        <span className="text-sm md:text-[18px] font-bold  wider">Brochure</span>
+                        <Download className="w-3.5 h-3.5" />
+                        <span className="text-xs md:text-sm font-bold wider">Brochure</span>
                     </button>
 
                     <button
                         onClick={() => setShowModal(true)}
-                        className="flex flex-col items-center justify-center gap-1.5 bg-white text-black py-3 rounded-xl shadow-lg transition-all active:scale-95"
+                        className="flex flex-col items-center justify-center gap-1 bg-white text-black py-2 rounded-xl shadow-lg transition-all active:scale-95"
                     >
-                        <Mail className="w-4 h-4" />
-                        <span className="text-sm md:text-[18px] font-bold  wider">Enquire</span>
+                        <Mail className="w-3.5 h-3.5" />
+                        <span className="text-xs md:text-sm font-bold wider">Enquire</span>
                     </button>
                     </div>
                 </div>
