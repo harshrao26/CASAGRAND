@@ -17,7 +17,7 @@ export default function LeadForm({ className = "" }) {
                     <input
                         type="text"
                         placeholder="Enter your name"
-                        className="w-full pl-12 pr-4 py-3.5 bg-gray-50/50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white outline-none transition-all placeholder:text-gray-600 font-semibold text-gray-900"
+                        className="w-full pl-12 pr-4 py-3.5 bg-gray-50/50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white outline-none transition-all placeholder:text-gray-300 font-semibold text-gray-900"
                         required
                     />
                 </div>
@@ -34,8 +34,10 @@ export default function LeadForm({ className = "" }) {
                     </div>
                     <input
                         type="email"
+                        pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                        title="Please enter a valid email address"
                         placeholder="your.email@example.com"
-                        className="w-full pl-12 pr-4 py-3.5 bg-gray-50/50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white outline-none transition-all placeholder:text-gray-600 font-semibold text-gray-900"
+                        className="w-full pl-12 pr-4 py-3.5 bg-gray-50/50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white outline-none transition-all placeholder:text-gray-300 font-semibold text-gray-900"
                         required
                     />
                 </div>
@@ -52,8 +54,14 @@ export default function LeadForm({ className = "" }) {
                     </div>
                     <input
                         type="tel"
-                        placeholder="+91 98765 43210"
-                        className="w-full pl-12 pr-4 py-3.5 bg-gray-50/50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white outline-none transition-all placeholder:text-gray-600 font-semibold text-gray-900"
+                        pattern="^[0-9]{10}$"
+                        title="Please enter exactly 10 digits"
+                        placeholder="9876543210"
+                        maxLength="10"
+                        onInput={(e) => {
+                            e.target.value = e.target.value.replace(/[^0-9]/g, '').slice(0, 10);
+                        }}
+                        className="w-full pl-12 pr-4 py-3.5 bg-gray-50/50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white outline-none transition-all placeholder:text-gray-300 font-semibold text-gray-900"
                         required
                     />
                 </div>

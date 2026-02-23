@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Image from 'next/image';
 
@@ -38,26 +39,37 @@ const Hero = () => {
                                 type="text"
                                 placeholder="Enter your name"
                                 className="w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium"
+                                required
                             />
                         </div>
                         <div className="flex flex-col items-start w-full text-left">
                             <label className="text-[10px] font-bold  tracking-[0.03em] mb-2 text-gray-800">Email Address</label>
                             <input
                                 type="email"
+                                pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                                title="Please enter a valid email address"
                                 placeholder="your.email@example.com"
                                 className="w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium"
+                                required
                             />
                         </div>
                         <div className="flex flex-col items-start w-full text-left">
                             <label className="text-[10px] font-bold  tracking-[0.03em] mb-2 text-gray-800">Phone Number</label>
                             <input
                                 type="tel"
-                                placeholder="+91 98765 43210"
+                                pattern="^[0-9]{10}$"
+                                title="Please enter exactly 10 digits"
+                                placeholder="9876543210"
+                                maxLength="10"
+                                onInput={(e) => {
+                                    e.target.value = e.target.value.replace(/[^0-9]/g, '').slice(0, 10);
+                                }}
                                 className="w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium"
+                                required
                             />
                         </div>
                         <button
-                            type="button"
+                            type="submit"
                             className="w-full bg-[#FCB63A] hover:bg-[#FCB63A]/80 text-black font-bold px-8 py-4 rounded-xl transition-all shadow-lg active:scale-95  tracking-[0.03em] text-xs h-[58px]"
                         >
                             Enquire Now
