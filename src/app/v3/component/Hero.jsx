@@ -1,8 +1,40 @@
 "use client";
-import React from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
+import { Loader2 } from 'lucide-react';
 
 const Hero = () => {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch('/api/salesforce', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+            const result = await response.json();
+            if (result.success) {
+                setSubmitStatus({ type: 'success', message: 'Thank you! We will contact you shortly.' });
+                e.target.reset();
+            } else {
+                setSubmitStatus({ type: 'error', message: result.message || 'Something went wrong.' });
+            }
+        } catch (error) {
+            setSubmitStatus({ type: 'error', message: 'Failed to submit.' });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
         <section className="relative pt-40 min-h-screen w-full overflow-hidden text-white bg-[#FDB33A]">
             {/* Background Image */}
@@ -32,11 +64,12 @@ const Hero = () => {
 
                 {/* Hero Form - Refined for visibility */}
                 <div className="w-full z-30 max-w-5xl bg-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-gray-100 p-6 md:p-8 rounded-2xl animate-fade-in-up">
-                    <form className="flex flex-col md:grid md:grid-cols-4 gap-6 items-end">
+                    <form onSubmit={handleSubmit} className="flex flex-col md:grid md:grid-cols-4 gap-6 items-end">
                         <div className="flex flex-col items-start w-full text-left">
                             <label className="text-[10px] font-bold  tracking-[0.03em] mb-2 text-gray-800">Full Name</label>
                             <input
                                 type="text"
+                                name="fullName"
                                 placeholder="Enter your name"
                                 className="w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium"
                                 required
@@ -46,6 +79,7 @@ const Hero = () => {
                             <label className="text-[10px] font-bold  tracking-[0.03em] mb-2 text-gray-800">Email Address</label>
                             <input
                                 type="email"
+                                name="email"
                                 pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
                                 title="Please enter a valid email address"
                                 placeholder="your.email@example.com"
@@ -57,6 +91,7 @@ const Hero = () => {
                             <label className="text-[10px] font-bold  tracking-[0.03em] mb-2 text-gray-800">Phone Number</label>
                             <input
                                 type="tel"
+                                name="phone"
                                 pattern="^[0-9]{10}$"
                                 title="Please enter exactly 10 digits"
                                 placeholder="9876543210"
@@ -70,11 +105,18 @@ const Hero = () => {
                         </div>
                         <button
                             type="submit"
-                            className="w-full bg-[#FCB63A] hover:bg-[#FCB63A]/80 text-black font-bold px-8 py-4 rounded-xl transition-all shadow-lg active:scale-95  tracking-[0.03em] text-xs h-[58px]"
+                            disabled={isSubmitting}
+                            className="w-full flex items-center justify-center gap-2 bg-[#FCB63A] hover:bg-[#FCB63A]/80 disabled:bg-[#FCB63A]/50 disabled:cursor-not-allowed text-black font-bold px-8 py-4 rounded-xl transition-all shadow-lg active:scale-95 disabled:active:scale-100 tracking-[0.03em] text-xs h-[58px]"
                         >
-                            Enquire Now
+                            {isSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : "Enquire Now"}
                         </button>
                     </form>
+                    {submitStatus && (
+                        <div className={`mt-4 p-3 rounded-xl text-xs text-center font-medium ${submitStatus.type === 'success' ? 'bg-green-50 text-green-700 border border-green-200' : 'bg-red-50 text-red-700 border border-red-200'
+                            }`}>
+                            {submitStatus.message}
+                        </div>
+                    )}
                 </div>
             </div>
         </section>

@@ -1,10 +1,46 @@
 'use client';
 
-import { User, Mail, Phone, Lock, ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { User, Mail, Phone, Lock, ArrowRight, Loader2 } from 'lucide-react';
 
 export default function LeadForm({ className = "" }) {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch('/api/salesforce', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                setSubmitStatus({ type: 'success', message: 'Thank you! We will contact you shortly.' });
+                e.target.reset();
+            } else {
+                setSubmitStatus({ type: 'error', message: result.message || 'Something went wrong.' });
+            }
+        } catch (error) {
+            setSubmitStatus({ type: 'error', message: 'Failed to submit the form. Please try again.' });
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
-        <form className={`space-y-4 ${className}`}>
+        <form onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
             {/* Full Name */}
             <div className="group">
                 <label className="block text-xs font-semibold text-gray-600 uppercase tracking-widest mb-2 group-focus-within:text-yellow-600 transition-colors">
@@ -16,6 +52,7 @@ export default function LeadForm({ className = "" }) {
                     </div>
                     <input
                         type="text"
+                        name="fullName"
                         placeholder="Enter your name"
                         className="w-full pl-12 pr-4 py-3.5 bg-gray-50/50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white outline-none transition-all placeholder:text-gray-300 font-semibold text-gray-900"
                         required
@@ -34,6 +71,7 @@ export default function LeadForm({ className = "" }) {
                     </div>
                     <input
                         type="email"
+                        name="email"
                         pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
                         title="Please enter a valid email address"
                         placeholder="your.email@example.com"
@@ -54,6 +92,7 @@ export default function LeadForm({ className = "" }) {
                     </div>
                     <input
                         type="tel"
+                        name="phone"
                         pattern="^[0-9]{10}$"
                         title="Please enter exactly 10 digits"
                         placeholder="9876543210"
@@ -70,11 +109,26 @@ export default function LeadForm({ className = "" }) {
             {/* Submit Button */}
             <button
                 type="submit"
-                className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3.5 rounded-2xl font-semibold text-lg transition-all shadow-xl shadow-yellow-500/20 hover:shadow-yellow-500/30 transform hover:-translate-y-1 flex items-center justify-center gap-3 mt-4 active:scale-95"
+                disabled={isSubmitting}
+                className="w-full bg-yellow-500 hover:bg-yellow-600 disabled:bg-yellow-400 disabled:cursor-not-allowed text-white py-3.5 rounded-2xl font-semibold text-lg transition-all shadow-xl shadow-yellow-500/20 hover:shadow-yellow-500/30 transform hover:-translate-y-1 disabled:hover:translate-y-0 flex items-center justify-center gap-3 mt-4 active:scale-95 disabled:active:scale-100"
             >
-                <span className='text-black'>Enquire Now</span>
-                <ArrowRight className="w-5 h-5 text-black" />
+                {isSubmitting ? (
+                    <Loader2 className="w-5 h-5 text-black animate-spin" />
+                ) : (
+                    <>
+                        <span className='text-black'>Enquire Now</span>
+                        <ArrowRight className="w-5 h-5 text-black" />
+                    </>
+                )}
             </button>
+
+            {/* Status Message */}
+            {submitStatus && (
+                <div className={`p-3 rounded-xl text-xs text-center font-medium ${submitStatus.type === 'success' ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'
+                    }`}>
+                    {submitStatus.message}
+                </div>
+            )}
 
             {/* Security Note */}
             <div className="flex items-center justify-center gap-2 group/note py-2">
