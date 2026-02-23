@@ -47,7 +47,7 @@ const Hero = () => {
                     priority
                 />
                 {/* Re-designed overlays for V3 luxury look */}
-                <div className="absolute inset-0 bg-gradient-to-b from-[#FDB33A]/60 via-transparent to-[#FDB33A]/60 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#FDB33A]/60 via-transparent to-[#FDB33A]/20 z-10" />
                 {/* <div className="absolute inset-0 bg-gradient-to-t from-[#FDB33A]/70 via-transparent to-[#FDB33A]/70 z-10" /> */}
             </div>
 
