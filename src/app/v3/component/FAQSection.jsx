@@ -57,13 +57,13 @@ export default function FAQSection() {
     };
 
     return (
-        <section className="w-full py-20   bg-white">
+        <section className="w-full py-10   bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
 
                     {/* Left: Title */}
                     <div className="lg:w-1/3 shrink-0">
-                        <h2 className="text-4xl sm:text-5xl text-[#1C1C1C] leading-[1.1]">
+                        <h2 className="text-2xl sm:text-3xl text-[#1C1C1C] leading-[1.1]">
                             FAQs
                         </h2>
                     </div>
@@ -87,7 +87,7 @@ export default function FAQSection() {
                                                     Q{idx + 1}
                                                 </span>
                                             </div>
-                                            <span className="text-[15px]   md:text-base font-medium text-[#1C1C1C] leading-snug">
+                                            <span className="text-[13px] md:text-sm font-medium text-[#1C1C1C] leading-snug">
                                                 {faq.question}
                                             </span>
                                         </div>
@@ -99,7 +99,7 @@ export default function FAQSection() {
                                     <div
                                         className={`overflow-hidden bg-[#F3F3F3] transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
                                     >
-                                        <div className="p-5 md:p-6 pt-0 text-sm md:text-[15px] text-gray-800 leading-relaxed border-t border-gray-200/50 mt-2">
+                                        <div className="p-5 md:p-6 pt-0 text-[13px] md:text-sm text-gray-800 leading-relaxed border-t border-gray-200/50 mt-2">
                                             {faq.answer}
                                         </div>
                                     </div>

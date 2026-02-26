@@ -51,7 +51,7 @@ const Header = () => {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setShowModal(true)}
-                        className="bg-[#FCB63A] font-semibold text-black/80 px-4 py-2 rounded-lg hover:bg-yellow-500 transition-colors"
+                        className="bg-[#FCB63A] text-sm md:text-base font-semibold text-black/80 px-4 py-2 rounded-lg hover:bg-yellow-500 transition-colors"
                     >
                         Enquire Now
                     </button>

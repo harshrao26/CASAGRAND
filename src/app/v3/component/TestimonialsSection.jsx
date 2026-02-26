@@ -21,20 +21,20 @@ const videoTestimonials = [
 
 export default function TestimonialsSection() {
     return (
-        <section className="py-20 bg-white">
+        <section className="py-10 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
-                <div className="text-center mb-16 md:mb-24">
-                    <h2 className="text-4xl sm:text-5xl text-center text-[#1C1C1C] mb-4 leading-[1.1]">
+                <div className="text-center mb-10">
+                    <h2 className="text-2xl sm:text-3xl text-center text-[#1C1C1C] mb-4 leading-[1.1]">
                         What Our Homebuyers Say
                     </h2>
-                    <p className="md:text-xl text-lg text-center text-gray-600 leading-relaxed max-w-4xl mx-auto">
+                    <p className="text-sm md:text-base text-center text-gray-600 leading-relaxed max-w-2xl mx-auto">
                         Don't just take our word for it - hear from thousands of satisfied homeowners who
                         trusted Casagrand for their dream home.
                     </p>
                 </div>
 
-                <div className="mb-24 px-4 sm:px-0">
+                <div className="mb-10 px-4 sm:px-0">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
                         {videoTestimonials.map((video) => (
                             <div key={video.id} className="flex flex-col gap-4">
@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
                                         allowFullScreen
                                     ></iframe>
                                 </div>
-                                <h3 className="text-xl md:text-2xl text-[#1C1C1C] px-2 italic">
+                                <h3 className="text-base md:text-lg text-[#1C1C1C] px-2 italic">
                                     "{video.title}"
                                 </h3>
                             </div>
@@ -60,21 +60,21 @@ export default function TestimonialsSection() {
                 {/* Trust Elements */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                     <div className="bg-[#F9F9F9] hover:bg-[#F3F3F3] transition-colors duration-300 rounded-xl p-8 text-center border border-gray-200 shadow-sm">
-                        <div className="text-4xl text-[#FCB63A] mb-3">4.5/5</div>
-                        <p className="text-[15px] text-[#1C1C1C] font-semibold mb-1">Average Rating</p>
-                        <p className="text-[13px] text-gray-500 font-medium">From 2,500+ reviews</p>
+                        <div className="text-2xl text-[#FCB63A] mb-3">4.5/5</div>
+                        <p className="text-[14px] text-[#1C1C1C] font-semibold mb-1">Average Rating</p>
+                        <p className="text-[12px] text-gray-500 font-medium">From 2,500+ reviews</p>
                     </div>
 
                     <div className="bg-[#F9F9F9] hover:bg-[#F3F3F3] transition-colors duration-300 rounded-xl p-8 text-center border border-gray-200 shadow-sm">
-                        <div className="text-4xl text-[#FCB63A] mb-3">98%</div>
-                        <p className="text-[15px] text-[#1C1C1C] font-semibold mb-1">Customer Satisfaction</p>
-                        <p className="text-[13px] text-gray-500 font-medium">Would recommend us</p>
+                        <div className="text-2xl text-[#FCB63A] mb-3">98%</div>
+                        <p className="text-[14px] text-[#1C1C1C] font-semibold mb-1">Customer Satisfaction</p>
+                        <p className="text-[12px] text-gray-500 font-medium">Would recommend us</p>
                     </div>
 
                     <div className="bg-[#F9F9F9] hover:bg-[#F3F3F3] transition-colors duration-300 rounded-xl p-8 text-center border border-gray-200 shadow-sm">
-                        <div className="text-4xl text-[#FCB63A] mb-3">50K+</div>
-                        <p className="text-[15px] text-[#1C1C1C] font-semibold mb-1">Happy Families</p>
-                        <p className="text-[13px] text-gray-500 font-medium">Living in our homes</p>
+                        <div className="text-2xl text-[#FCB63A] mb-3">50K+</div>
+                        <p className="text-[14px] text-[#1C1C1C] font-semibold mb-1">Happy Families</p>
+                        <p className="text-[12px] text-gray-500 font-medium">Living in our homes</p>
                     </div>
                 </div>
             </div>

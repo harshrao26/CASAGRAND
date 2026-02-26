@@ -43,7 +43,7 @@ export default function LeadForm({ className = "" }) {
         <form onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
             {/* Full Name */}
             <div className="group">
-                <label className="block text-xs font-semibold text-gray-600 uppercase tracking-widest mb-2 group-focus-within:text-yellow-600 transition-colors">
+                <label className="block text-[11px] font-semibold text-gray-600 uppercase tracking-widest mb-2 group-focus-within:text-yellow-600 transition-colors">
                     Full Name
                 </label>
                 <div className="relative">
@@ -54,7 +54,7 @@ export default function LeadForm({ className = "" }) {
                         type="text"
                         name="fullName"
                         placeholder="Enter your name"
-                        className="w-full pl-12 pr-4 py-3.5 bg-gray-50/50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white outline-none transition-all placeholder:text-gray-300 font-semibold text-gray-900"
+                        className="w-full text-sm pl-12 pr-4 py-3.5 bg-gray-50/50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white outline-none transition-all placeholder:text-gray-300 font-semibold text-gray-900"
                         required
                     />
                 </div>
@@ -62,7 +62,7 @@ export default function LeadForm({ className = "" }) {
 
             {/* Email Address */}
             <div className="group">
-                <label className="block text-xs font-semibold text-gray-600 uppercase tracking-widest mb-2 group-focus-within:text-yellow-600 transition-colors">
+                <label className="block text-[11px] font-semibold text-gray-600 uppercase tracking-widest mb-2 group-focus-within:text-yellow-600 transition-colors">
                     Email Address
                 </label>
                 <div className="relative">
@@ -75,7 +75,7 @@ export default function LeadForm({ className = "" }) {
                         pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
                         title="Please enter a valid email address"
                         placeholder="your.email@example.com"
-                        className="w-full pl-12 pr-4 py-3.5 bg-gray-50/50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white outline-none transition-all placeholder:text-gray-300 font-semibold text-gray-900"
+                        className="w-full text-sm pl-12 pr-4 py-3.5 bg-gray-50/50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white outline-none transition-all placeholder:text-gray-300 font-semibold text-gray-900"
                         required
                     />
                 </div>
@@ -83,7 +83,7 @@ export default function LeadForm({ className = "" }) {
 
             {/* Phone Number */}
             <div className="group">
-                <label className="block text-xs font-semibold text-gray-600 uppercase tracking-widest mb-2 group-focus-within:text-yellow-600 transition-colors">
+                <label className="block text-[11px] font-semibold text-gray-600 uppercase tracking-widest mb-2 group-focus-within:text-yellow-600 transition-colors">
                     Phone Number
                 </label>
                 <div className="relative">
@@ -100,7 +100,7 @@ export default function LeadForm({ className = "" }) {
                         onInput={(e) => {
                             e.target.value = e.target.value.replace(/[^0-9]/g, '').slice(0, 10);
                         }}
-                        className="w-full pl-12 pr-4 py-3.5 bg-gray-50/50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white outline-none transition-all placeholder:text-gray-300 font-semibold text-gray-900"
+                        className="w-full text-sm pl-12 pr-4 py-3.5 bg-gray-50/50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-yellow-500/20 focus:border-yellow-500 focus:bg-white outline-none transition-all placeholder:text-gray-300 font-semibold text-gray-900"
                         required
                     />
                 </div>
@@ -110,7 +110,7 @@ export default function LeadForm({ className = "" }) {
             <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-yellow-500 hover:bg-yellow-600 disabled:bg-yellow-400 disabled:cursor-not-allowed text-white py-3.5 rounded-2xl font-semibold text-lg transition-all shadow-xl shadow-yellow-500/20 hover:shadow-yellow-500/30 transform hover:-translate-y-1 disabled:hover:translate-y-0 flex items-center justify-center gap-3 mt-4 active:scale-95 disabled:active:scale-100"
+                className="w-full bg-yellow-500 hover:bg-yellow-600 disabled:bg-yellow-400 disabled:cursor-not-allowed text-white py-3.5 rounded-2xl font-semibold text-base transition-all shadow-xl shadow-yellow-500/20 hover:shadow-yellow-500/30 transform hover:-translate-y-1 disabled:hover:translate-y-0 flex items-center justify-center gap-3 mt-4 active:scale-95 disabled:active:scale-100"
             >
                 {isSubmitting ? (
                     <Loader2 className="w-5 h-5 text-black animate-spin" />

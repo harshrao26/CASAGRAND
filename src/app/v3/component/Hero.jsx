@@ -54,10 +54,10 @@ const Hero = () => {
             <div className="relative z-20 h-full w-full flex flex-col items-center justify-e ter px-4">
                 {/* Main Content */}
                 <div className="max-w-7xl w-full text-center mb-12 animate-fade-in-up">
-                    <h1 className="text-[39px] sm:text-6xl font-semibold mb-4 leading-[1.1] text-white drop-shadow-2xl">
+                    <h1 className="text-3xl sm:text-4xl font-semibold mb-4 leading-[1.1] text-white drop-shadow-2xl">
                         Explore Premium Homes in Chennai
                     </h1>
-                    <p className="md:text-xl text-lg max-w-3xl mx-auto font-semibold trackin g-wide text-white drop-shad ow-md leading-relaxed">
+                    <p className="text-sm md:text-base max-w-3xl mx-auto font-semibold trackin g-wide text-white drop-shad ow-md leading-relaxed">
                         Compare 5+ Casagrand Residential Projects in Chennai and get instant access to floor plans, pricing, and limited-period offers.
                     </p>
                 </div>
@@ -71,7 +71,7 @@ const Hero = () => {
                                 type="text"
                                 name="fullName"
                                 placeholder="Enter your name"
-                                className="w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium"
+                                className="w-full text-sm bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium"
                                 required
                             />
                         </div>
@@ -83,7 +83,7 @@ const Hero = () => {
                                 pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
                                 title="Please enter a valid email address"
                                 placeholder="your.email@example.com"
-                                className="w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium"
+                                className="w-full text-sm bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium"
                                 required
                             />
                         </div>
@@ -99,14 +99,14 @@ const Hero = () => {
                                 onInput={(e) => {
                                     e.target.value = e.target.value.replace(/[^0-9]/g, '').slice(0, 10);
                                 }}
-                                className="w-full bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium"
+                                className="w-full text-sm bg-gray-50 border border-gray-200 text-gray-900 placeholder-gray-400 rounded-xl px-4 py-4 outline-none focus:border-[#C89574] focus:ring-1 focus:ring-[#C89574] transition-all font-medium"
                                 required
                             />
                         </div>
                         <button
                             type="submit"
                             disabled={isSubmitting}
-                            className="w-full flex items-center justify-center gap-2 bg-[#FCB63A] hover:bg-[#FCB63A]/80 disabled:bg-[#FCB63A]/50 disabled:cursor-not-allowed text-black font-bold px-8 py-4 rounded-xl transition-all shadow-lg active:scale-95 disabled:active:scale-100 tracking-[0.03em] text-xs h-[58px]"
+                            className="w-full flex items-center justify-center gap-2 bg-[#FCB63A] hover:bg-[#FCB63A]/80 disabled:bg-[#FCB63A]/50 disabled:cursor-not-allowed text-black font-bold px-8 py-4 rounded-xl transition-all shadow-lg active:scale-95 disabled:active:scale-100 tracking-[0.03em] text-[11px] h-[58px]"
                         >
                             {isSubmitting ? <Loader2 className="w-4 h-4 animate-spin" /> : "Enquire Now"}
                         </button>
