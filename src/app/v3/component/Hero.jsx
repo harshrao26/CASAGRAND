@@ -2,10 +2,12 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Loader2 } from 'lucide-react';
+import LeadForm from './LeadForm';
 
 const Hero = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
+    const [showModal, setShowModal] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -56,7 +58,7 @@ const Hero = () => {
                 <div className="max-w-7xl tx w-full text-center md:mt-0 mt-10 mb-12 animate-fade-in-up">
                     <h1 className="text-2xl sm:text-4xl font-semibold mb-4 lead ing-[1.1] text-white drop-shadow-2xl">
                         South India's 2nd    Developer <br />
-                       Discover Premium Living with<span className="bg- text-[#FCB63A]  px-2 py-1">Casagrand</span>
+                        Discover Premium Living with<span className="bg- text-[#FCB63A]  px-2 py-1">Casagrand</span>
                     </h1>
                     <p className="text-sm md:text-base max-w-3xl mx-auto font-semibold trackin g-wide text-white drop-shad ow-md leading-relaxed">
                         20 Years of Real Estate Excellence <br /> 160+ Landmark Projects | 55,000+ Happy Families
@@ -64,7 +66,10 @@ const Hero = () => {
                 </div>
 
 
-                <button className="bg-[#FCB63A] text-black px-4 py-2 rounded-xl">
+                <button
+                    onClick={() => setShowModal(true)}
+                    className="bg-[#FCB63A] text-black px-6 py-2.5 rounded-xl font-bold text-sm shadow-lg hover:bg-[#e0a030] active:scale-95 transition-all"
+                >
                     Schedule Site Visit Now
                 </button>
 
@@ -129,6 +134,26 @@ const Hero = () => {
                     )}
                 </div> */}
             </div>
+
+            {/* Lead Form Modal */}
+            {showModal && (
+                <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[60] flex items-center justify-center p-4">
+                    <div className="bg-white rounded-2xl max-w-md w-full p-8 relative shadow-2xl animate-in fade-in zoom-in duration-200">
+                        <button
+                            onClick={() => setShowModal(false)}
+                            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        <div className="text-center mb-6">
+                            <h3 className="text-lg font-semibold text-gray-900 mb-2">Request Detailed <br />Pricing & Floor Plans</h3>
+                        </div>
+                        <LeadForm />
+                    </div>
+                </div>
+            )}
         </section>
     );
 };
