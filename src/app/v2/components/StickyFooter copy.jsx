@@ -86,7 +86,7 @@ export default function StickyFooter() {
                                 Get In Touch
                             </h3>
                             <p className="text-gray-600">
-                                Fill in your details and our experts will contact you shortly
+                                Fill in yo ur details and our experts will contact you shortly
                             </p>
                         </div>
 

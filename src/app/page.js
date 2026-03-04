@@ -2,6 +2,7 @@ import React from "react";
 import { Poppins } from "next/font/google";
 import Header from "@/app/v3/component/Header";
 import Hero from "@/app/v3/component/Hero";
+import FilterBar from "@/app/v3/component/FilterBar";
 import PropertiesSection from "@/app/v3/component/PropertiesSection";
 import InteriorShowcase from "@/app/v3/component/InteriorShowcase";
 import WhyChooseSection from "@/app/v3/component/WhyChooseSection";
@@ -20,9 +21,10 @@ const poppins = Poppins({
 export default function Home() {
   return (
     <ProjectProvider>
-      <main className={`${poppins.className} relative min-h-screen`}>
+      <main className={` relative min-h-screen`}>
         <Header />
         <Hero />
+        <FilterBar />
         <PropertiesSection />
         <WhyChooseSection />
         <InteriorShowcase />
