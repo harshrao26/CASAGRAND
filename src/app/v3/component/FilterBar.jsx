@@ -106,7 +106,7 @@ export default function FilterBar() {
                         <div className="relative h-10 flex items-center">
                             <div className="relative w-full">
                                 {/* Track background */}
-                                <div className="absolute top-1/2 -translate-y-1/2 w-full h-1.5 bg-gray-200 rounded-full" />
+                                <div className="absolute top-1/2  -translate-y-1/2 w-full h-1.5 bg-gray-200 rounded-full" />
                                 {/* Highlighted range */}
                                 <div
                                     className="absolute top-1/2 -translate-y-1/2 h-1.5 bg-[#FCB63A] rounded-full pointer-events-none"
@@ -124,7 +124,7 @@ export default function FilterBar() {
                                         const v = Math.min(Number(e.target.value), localMax - 10);
                                         setLocalMin(v);
                                     }}
-                                    className="absolute w-full appearance-none bg-transparent cursor-pointer range-thumb-min"
+                                    className="filter-range"
                                     style={{ zIndex: localMin > 450 ? 5 : 3 }}
                                 />
                                 {/* Max thumb */}
@@ -136,7 +136,7 @@ export default function FilterBar() {
                                         const v = Math.max(Number(e.target.value), localMin + 10);
                                         setLocalMax(v);
                                     }}
-                                    className="absolute w-full appearance-none bg-transparent cursor-pointer"
+                                    className="filter-range"
                                     style={{ zIndex: 4 }}
                                 />
                             </div>
@@ -190,35 +190,51 @@ export default function FilterBar() {
             </div>
 
             {/* Range slider custom styles */}
-            <style jsx>{`
-                input[type='range'] {
+            <style>{`
+                .filter-range {
                     pointer-events: none;
                     height: 20px;
+                    background: transparent;
+                    -webkit-appearance: none;
+                    appearance: none;
+                    width: 100%;
+                    position: absolute;
                 }
-                input[type='range']::-webkit-slider-thumb {
+                .filter-range::-webkit-slider-runnable-track {
+                    background: transparent;
+                    height: 6px;
+                }
+                .filter-range::-webkit-slider-thumb {
                     pointer-events: all;
                     -webkit-appearance: none;
-                    width: 18px;
-                    height: 18px;
-                    background: white;
-                    border: 2px solid #FCB63A;
+                    width: 20px;
+                    height: 20px;
+                    background: #FCB63A;
+                    border: 2.5px solid #fff;
                     border-radius: 50%;
-                    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-                    cursor: pointer;
-                    transition: transform 0.1s;
+                    box-shadow: 0 2px 6px rgba(252,182,58,0.5);
+                    cursor: grab;
+                    transition: transform 0.15s, box-shadow 0.15s;
+                    margin-top: -7px;
                 }
-                input[type='range']::-webkit-slider-thumb:hover {
-                    transform: scale(1.2);
+                .filter-range::-webkit-slider-thumb:active {
+                    cursor: grabbing;
+                    transform: scale(1.25);
+                    box-shadow: 0 3px 10px rgba(252,182,58,0.7);
                 }
-                input[type='range']::-moz-range-thumb {
+                .filter-range::-moz-range-track {
+                    background: transparent;
+                    height: 6px;
+                }
+                .filter-range::-moz-range-thumb {
                     pointer-events: all;
-                    width: 18px;
-                    height: 18px;
-                    background: white;
-                    border: 2px solid #FCB63A;
+                    width: 20px;
+                    height: 20px;
+                    background: #FCB63A;
+                    border: 2.5px solid #fff;
                     border-radius: 50%;
-                    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
-                    cursor: pointer;
+                    box-shadow: 0 2px 6px rgba(252,182,58,0.5);
+                    cursor: grab;
                 }
             `}</style>
         </div>

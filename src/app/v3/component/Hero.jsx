@@ -64,7 +64,7 @@ const Hero = () => {
                 </div>
 
                 {/* Hero Form - Refined for visibility */}
-                {/* <div className="w-full z-30 mt-10 max-w-5xl bg-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-gray-100 p-4 md:p-6 rounded-2xl animate-fade-in-up">
+                <div className="w-full z-30 mt-10 max-w-5xl bg-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-gray-100 p-4 md:p-6 rounded-2xl animate-fade-in-up">
                    <p className="text-center md:text-xl font-semibold text-gray-800 md:mb-8 mb-4">
                     Request Detailed Pricing & Floor Plans
                    </p>
@@ -122,7 +122,7 @@ const Hero = () => {
                             {submitStatus.message}
                         </div>
                     )}
-                </div> */}
+                </div>
             </div>
         </section>
     );

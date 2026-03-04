@@ -3,7 +3,7 @@ export const PROJECTS_DATA = {
   Promenade: {
     name: "Promenade",
     location: "Yelahanka",
-    city: "Banglore",
+    city: "Bangalore",
     locationLink: "https://maps.app.goo.gl/bmW1gYuTJ1FWsd2x9",
     acres: "3.89 acres",
     nearby:
