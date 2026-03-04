@@ -40,7 +40,7 @@ export default function Footer() {
                                 </li>
                                 <a href="https://www.casagrand.co.in/new-privacy-policy/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer">
                                     <span className="w-1.5 h-1.5 bg-blue-500 rounded-full"></span>
-                                    Privacy Poacy
+                                    Privacy Policy
                                 </a>
                             </ul>
                         </div>

@@ -138,6 +138,7 @@ export default function LeadForm({ className = "" }) {
                 <p className="text-[10px]  font-semibold text-gray-600">
                     Secure & Private Verification
                 </p>
+                 
             </div>
         </form>
     );

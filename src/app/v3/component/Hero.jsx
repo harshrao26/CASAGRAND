@@ -53,18 +53,23 @@ const Hero = () => {
 
             <div className="relative z-20 h-full w-full flex flex-col items-center justify-e ter px-4">
                 {/* Main Content */}
-                <div className="max-w-7xl w-full text-center mb-12 animate-fade-in-up">
+                <div className="max-w-7xl tx w-full text-center md:mt-0 mt-10 mb-12 animate-fade-in-up">
                     <h1 className="text-2xl sm:text-4xl font-semibold mb-4 lead ing-[1.1] text-white drop-shadow-2xl">
                         South India's 2nd    Developer <br />
                        Discover Premium Living with<span className="bg- text-[#FCB63A]  px-2 py-1">Casagrand</span>
                     </h1>
                     <p className="text-sm md:text-base max-w-3xl mx-auto font-semibold trackin g-wide text-white drop-shad ow-md leading-relaxed">
-                        Compare 5+ Casagrand Residential Projects in Chennai and get instant access to floor plans, pricing, and limited-period offers.
+                        20 Years of Real Estate Excellence <br /> 160+ Landmark Projects | 55,000+ Happy Families
                     </p>
                 </div>
 
+
+                <button className="bg-[#FCB63A] text-black px-4 py-2 rounded-xl">
+                    Schedule Site Visit Now
+                </button>
+
                 {/* Hero Form - Refined for visibility */}
-                <div className="w-full z-30 mt-10 max-w-5xl bg-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-gray-100 p-4 md:p-6 rounded-2xl animate-fade-in-up">
+                {/* <div className="w-full z-30 mt-10 max-w-5xl bg-white shadow-[0_20px_50px_rgba(0,0,0,0.2)] border border-gray-100 p-4 md:p-6 rounded-2xl animate-fade-in-up">
                    <p className="text-center md:text-xl font-semibold text-gray-800 md:mb-8 mb-4">
                     Request Detailed Pricing & Floor Plans
                    </p>
@@ -122,7 +127,7 @@ const Hero = () => {
                             {submitStatus.message}
                         </div>
                     )}
-                </div>
+                </div> */}
             </div>
         </section>
     );

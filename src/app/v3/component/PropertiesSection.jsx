@@ -275,8 +275,9 @@ export default function PropertiesSection() {
 
                         {/* Modal Content */}
                         <div className="text-center mb-6">
-                            <h3 className="text-2xl font-bold text-gray-900 mb-2">Get In Touch</h3>
-                            <p className="text-gray-600 text-sm">Fill in your details and our experts will contact you shortly</p>
+                            <h3 className="text-lg font-semibold text-gray-900 mb-2">Request Detailed  <br />Pricing & Floor Plans
+</h3>
+                            
                         </div>
 
                         {/* Lead Form */}

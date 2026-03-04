@@ -24,26 +24,18 @@ export default function StickyFooter() {
     return (
         <>
             <div
-                className={`fixed bottom-0 left-0 right-0 z-40 bg-[#1C1C1C]/95 backdrop-blur-md border-t border-white/10 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] transition-transform duration-500 ${isVisible ? 'translate-y-0' : 'translate-y-full'
+                className={`fixed bottom-0 left-0 right-0 z-40 md:bg-[#1C1C1C]5 backdrop-blur-md border-t border-white/10 shadow-[0_-10px_40px_rgba(0,0,0,0.3)] transition-transform duration-500 ${isVisible ? 'translate-y-0' : 'translate-y-full'
                     }`}
             >
-                <div className="max-w-4xl mx-auto px-4">
-                    <div className="grid grid-cols-3 gap-4 p-3 pb- md:pb-3">
+                <div className="max-w-md mx-auto px-4">
+                    <div className="grid grid-cols-2 gap-4 p-3 pb- md:pb-3">
                     
 
-                    <a
-                        href="https://wa.me/919876543210"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex flex-col items-center justify-center gap-1 bg-white hover:bg-white/90 text-white py-2 rounded-xl border border-white/10 transition-all active:scale-95"
-                    >
-                        <MessageCircle className="w-3.5 h-3.5 text-green-500" />
-                        <span className="text-xs md:text-sm font-bold text-black wider">Chat</span>
-                    </a>
+                     
 
                     <button
                         onClick={() => setShowModal(true)}
-                        className="flex flex-col items-center justify-center gap-1 bg-[#FCB63A] hover:bg-[#FCB63A]/80 text-white py-2 rounded-xl shadow-lg transition-all active:scale-95"
+                        className="flex  items-center justify-center gap-1 bg-[#FCB63A] hover:bg-[#FCB63A]/80 text-white py-2 rounded-xl shadow-lg transition-all active:scale-95"
                     >
                         <Download className="w-3.5 h-3.5" />
                         <span className="text-xs md:text-sm font-bold wider">Brochure</span>
@@ -51,7 +43,7 @@ export default function StickyFooter() {
 
                     <button
                         onClick={() => setShowModal(true)}
-                        className="flex flex-col items-center justify-center gap-1 bg-white hover:bg-white/90 text-black py-2 rounded-xl shadow-lg transition-all active:scale-95"
+                        className="flex  items-center justify-center gap-1 bg-white hover:bg-white/90 text-black py-2 rounded-xl shadow-lg transition-all active:scale-95"
                     >
                         <Mail className="w-3.5 h-3.5" />
                         <span className="text-xs md:text-sm font-bold wider">Enquire</span>
@@ -86,12 +78,9 @@ export default function StickyFooter() {
 
                         {/* Modal Content */}
                         <div className="text-center mb-6">
-                            <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                                Get In Touch
-                            </h3>
-                            <p className="text-gray-600">
-                                Fill in your details and our experts will contact you shortly
-                            </p>
+                            <h3 className="text-lg font-semibold text-gray-900 mb-2">Request Detailed  <br />Pricing & Floor Plans
+</h3>
+                            
                         </div>
 
                         {/* Lead Form */}
