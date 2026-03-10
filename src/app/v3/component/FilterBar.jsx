@@ -103,13 +103,11 @@ export default function FilterBar() {
                             <p className="text-[11px] font-bold text-[#f5a631]">{priceLabel(localMin)} – {priceLabel(localMax)}</p>
                         </div>
                         {/* Dual range: We simulate with two overlapping range inputs */}
-                        <div className="relative h-10 flex items-center">
-                            <div className="relative w-full">
-                                {/* Track background */}
-                                <div className="absolute top-1/2  -translate-y-1/2 w-full h-1.5 bg-gray-200 rounded-full" />
+                        <div className="relative h-6 flex items-center">
+                            <div className="relative w-full h-1.5 bg-gray-200 rounded-full">
                                 {/* Highlighted range */}
                                 <div
-                                    className="absolute top-1/2 -translate-y-1/2 h-1.5 bg-[#FCB63A] rounded-full pointer-events-none"
+                                    className="absolute top-0 h-full bg-[#FCB63A] rounded-full pointer-events-none"
                                     style={{
                                         left: `${(localMin / 500) * 100}%`,
                                         right: `${100 - (localMax / 500) * 100}%`,
@@ -199,10 +197,13 @@ export default function FilterBar() {
                     appearance: none;
                     width: 100%;
                     position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin: 0;
                 }
                 .filter-range::-webkit-slider-runnable-track {
                     background: transparent;
-                    height: 6px;
+                    height: 20px;
                 }
                 .filter-range::-webkit-slider-thumb {
                     pointer-events: all;
@@ -215,7 +216,6 @@ export default function FilterBar() {
                     box-shadow: 0 2px 6px rgba(252,182,58,0.5);
                     cursor: grab;
                     transition: transform 0.15s, box-shadow 0.15s;
-                    margin-top: -7px;
                 }
                 .filter-range::-webkit-slider-thumb:active {
                     cursor: grabbing;
@@ -224,7 +224,7 @@ export default function FilterBar() {
                 }
                 .filter-range::-moz-range-track {
                     background: transparent;
-                    height: 6px;
+                    height: 20px;
                 }
                 .filter-range::-moz-range-thumb {
                     pointer-events: all;
