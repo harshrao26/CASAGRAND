@@ -183,32 +183,22 @@ export default function PropertiesSection() {
                                     </div>
 
                                     {/* Key Specs Grid */}
-                                    <div className=" ">
-                                        {/* Configuration */}
-                                        <div>
-                                            <p className="text-[10px] font-bold text-gray-500 mb-0.5">CONFIGURATION</p>
-                                            <p className="text-[12px] sm:text-[13px] font-  text-gray-800 leading-snug">
+                                    <div>
+                                        <p className="text-[10px] font-bold text-gray-500 mb-0.5">CONFIGURATION</p>
+                                        <p className="text-[12px] sm:text-[13px] font-  text-gray-800 leading-snug">
+                                            {property.configuration}
+                                        </p>
+                                    </div>
+                                    {/* Acres */}
 
+                                    {/* Starting Rate */}
 
-                                                {/* {property.configuration} */}
-
-                                                2/3/4 BHK
-                                            </p>
-                                        </div>
-                                        {/* Acres */}
-
-                                        {/* Starting Rate */}
-
-                                        {/* Budget Range */}
-                                        <div>
-                                            <p className="text-[10px] mt-2 font-bold text-gray-500 mb-0.5">BUDGET RANGE</p>
-                                            <p className="text-[13px] sm:text-[15px] font-  text-[#f5a631] leading-snug">
-                                                {/* {property.price} */}
-
-                                                90L - 2.3Cr
-
-                                            </p>
-                                        </div>
+                                    {/* Budget Range */}
+                                    <div>
+                                        <p className="text-[10px] mt-2 font-bold text-gray-500 mb-0.5">BUDGET RANGE</p>
+                                        <p className="text-[13px] sm:text-[15px] font-  text-[#f5a631] leading-snug">
+                                            {property.budgetRange}
+                                        </p>
                                     </div>
 
 
@@ -276,8 +266,8 @@ export default function PropertiesSection() {
                         {/* Modal Content */}
                         <div className="text-center mb-6">
                             <h3 className="text-lg font-semibold text-gray-900 mb-2">Request Detailed  <br />Pricing & Floor Plans
-</h3>
-                            
+                            </h3>
+
                         </div>
 
                         {/* Lead Form */}
