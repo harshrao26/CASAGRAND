@@ -1,11 +1,22 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { User, Mail, Phone, Lock, ArrowRight, Loader2 } from 'lucide-react';
 
-export default function LeadForm({ className = "" }) {
+export default function LeadForm({ className = "", projectName = "General Enquiry" }) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
+    const searchParams = useSearchParams();
+
+    // Memoize UTMs from search params
+    const utms = useMemo(() => ({
+        utm_source: searchParams.get('utm_source') || '',
+        utm_medium: searchParams.get('utm_medium') || '',
+        utm_campaign: searchParams.get('utm_campaign') || '',
+        utm_content: searchParams.get('utm_content') || '',
+        utm_term: searchParams.get('utm_term') || '',
+    }), [searchParams]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -15,13 +26,20 @@ export default function LeadForm({ className = "" }) {
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData.entries());
 
+        // Merge form data with project info and UTMs
+        const payload = {
+            ...data,
+            projectInterested: projectName,
+            ...utms
+        };
+
         try {
             const response = await fetch('/api/salesforce', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(payload),
             });
 
             const result = await response.json();
@@ -138,7 +156,7 @@ export default function LeadForm({ className = "" }) {
                 <p className="text-[10px]  font-semibold text-gray-600">
                     Secure & Private Verification
                 </p>
-                 
+
             </div>
         </form>
     );

@@ -271,7 +271,7 @@ export default function PropertiesSection() {
                         </div>
 
                         {/* Lead Form */}
-                        <LeadForm />
+                        <LeadForm projectName={selectedProperty ? `Casagrand ${selectedProperty.name}` : "Properties Section Inquiry"} />
                     </div>
                 </div>
             )}

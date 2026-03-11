@@ -26,8 +26,8 @@ const Header = () => {
         <>
             <header
                 className={`fixed top-0 left-0 w-full z-50 py-4 px-6 md:px-12 flex items-center justify-between transition-all duration-500 ${isScrolled
-                        ? 'bg-white/90 backdrop-blur-lg border-b border-white/10 py-3 shadow-lg'
-                        : 'bg-transparent border-b border-transparent'
+                    ? 'bg-white/90 backdrop-blur-lg border-b border-white/10 py-3 shadow-lg'
+                    : 'bg-transparent border-b border-transparent'
                     }`}
             >
                 {/* Left Box (empty spacer for true centering) */}
@@ -85,14 +85,14 @@ const Header = () => {
                         {/* Modal Content */}
                         <div className="text-center mb-6">
                             <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                          Request Detailed  <br />Pricing & Floor Plans
+                                Request Detailed  <br />Pricing & Floor Plans
 
                             </h3>
-                           
+
                         </div>
 
                         {/* Lead Form */}
-                        <LeadForm />
+                        <LeadForm projectName="Header - General Enquiry" />
                     </div>
                 </div>
             )}

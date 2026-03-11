@@ -177,7 +177,7 @@ export default function Footer() {
                         </div>
 
                         {/* Lead Form */}
-                        <LeadForm />
+                        <LeadForm projectName="Footer - General Enquiry" />
                     </div>
                 </div>
             )}

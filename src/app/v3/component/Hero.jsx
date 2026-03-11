@@ -150,7 +150,7 @@ const Hero = () => {
                         <div className="text-center mb-6">
                             <h3 className="text-lg font-semibold text-gray-900 mb-2">Request Detailed <br />Pricing & Floor Plans</h3>
                         </div>
-                        <LeadForm />
+                        <LeadForm projectName="Hero Section - Main Inquiry" />
                     </div>
                 </div>
             )}
