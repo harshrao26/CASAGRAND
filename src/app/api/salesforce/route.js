@@ -50,6 +50,11 @@ export async function POST(request) {
       MobilePhone: phone.startsWith("+") ? phone : `+91${phone}`,
     };
 
+    console.log(
+      "Pushing Lead to Salesforce:",
+      JSON.stringify(salesforcePayload, null, 2),
+    );
+
     const response = await fetch(
       "https://casagrandbuilderprivatelimited--sfps.sandbox.my.salesforce-sites.com/services/apexrest/LeadGen?APIKey=7684921058394726",
       {
