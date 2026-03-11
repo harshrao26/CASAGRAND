@@ -28,19 +28,7 @@ export default function StickyFooter() {
                     }`}
             >
                 <div className="max-w-md mx-auto px-4">
-                    <div className="grid grid-cols-2 gap-4 p-3 pb- md:pb-3">
-                    
-
-                     
-
-                    <button
-                        onClick={() => setShowModal(true)}
-                        className="flex  items-center justify-center gap-1 bg-[#FCB63A] hover:bg-[#FCB63A]/80 text-white py-2 rounded-xl shadow-lg transition-all active:scale-95"
-                    >
-                        <Download className="w-3.5 h-3.5" />
-                        <span className="text-xs md:text-sm font-bold wider">Brochure</span>
-                    </button>
-
+                    <div className="grid grid-cols-2 gap-4 p-3 pb- md:pb-3">                 
                     <button
                         onClick={() => setShowModal(true)}
                         className="flex  items-center justify-center gap-1 bg-white hover:bg-white/90 text-black py-2 rounded-xl shadow-lg transition-all active:scale-95"
@@ -48,6 +36,15 @@ export default function StickyFooter() {
                         <Mail className="w-3.5 h-3.5" />
                         <span className="text-xs md:text-sm font-bold wider">Enquire</span>
                     </button>
+
+                       <button
+                        onClick={() => setShowModal(true)}
+                        className="flex  items-center justify-center gap-1 bg-[#FCB63A] hover:bg-[#FCB63A]/80 text-white py-2 rounded-xl shadow-lg transition-all active:scale-95"
+                    >
+                        <Download className="w-3.5 h-3.5" />
+                        <span className="text-xs md:text-sm font-bold wider">Brochure</span>
+                    </button>
+
                     </div>
                 </div>
             </div>

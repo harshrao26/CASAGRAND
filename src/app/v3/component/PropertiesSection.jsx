@@ -236,9 +236,15 @@ export default function PropertiesSection() {
                                     <div className="mt-auto flex flex-col gap-2.5">
                                         <button
                                             onClick={() => handleViewDetails(property)}
-                                            className="bg-[#fca326] hover:bg-[#e09121] text-black py-2.5 px-4 rounded-xl transition-all text-[12px] sm:text-[13px] font-bold w-full shadow-sm active:scale-95"
+                                            className="bg-[#fca326] hover:bg-[#e09121] text-black py-2.5 px-4 rounded-xl transition-all text-[9px] sm:text-[11px] font-bold w-full shadow-sm active:scale-95"
                                         >
-                                            {property.ctaText || "Get Cost Sheet"}
+                                            {property.ctaText || "Get A Quote"}
+                                        </button>
+                                        <button
+                                            onClick={() => handleViewDetails(property)}
+                                            className="bg-[#fca326] hover:bg-[#e09121] text-black py-2.5 px-4 rounded-xl transition-all text-[9px] sm:text-[11px] font-bold w-full shadow-sm active:scale-95"
+                                        >
+                                            {  "  Brochure"}
                                         </button>
 
                                     </div>

@@ -31,8 +31,7 @@ const Header = () => {
                     }`}
             >
                 {/* Left Box (empty spacer for true centering) */}
-                <div className="flex-1 hidden md:block"></div>
-
+ 
                 {/* Center Logo */}
                 <div className="flex-1 flex justify-start md:justify-center">
                     <Link href="/" className="relative block h-10 w-40 md:h-12 md:w-48 transition-transform hover:scale-105">
