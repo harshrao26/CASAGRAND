@@ -1,5 +1,6 @@
 // Project data organized by project name
 export const PROJECTS_DATA = {
+  /*
   Promenade: {
     name: "Promenade",
     location: "Yelahanka",
@@ -78,6 +79,7 @@ export const PROJECTS_DATA = {
       "/images/Casablanca/Copy of Poduim 1 To Osr.jpg",
     ],
   },
+  */
   Flagship: {
     name: "Flagship",
     location: "Pallikaranai",
