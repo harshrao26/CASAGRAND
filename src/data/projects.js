@@ -124,13 +124,13 @@ export const PROJECTS_DATA = {
       "https://casagrandsouthbrooke.com/wp-content/uploads/2024/07/SouthBrooke-Ph-2-Brochure.pdf",
     websiteLink:
       "https://www.casagrand.co.in/residential/ongoing-projects-chennai/casagrand-southbrooke/",
-    image: "/images/Southbrooke/Block-5.jpg",
+    image: "/images/Southbrooke/Block-5.webp",
     images: [
-      "/images/Southbrooke/Block-5.jpg",
-      "/images/Southbrooke/Day Elevation Cam.jpg",
-      "/images/Southbrooke/Entrance_Cam_Day.jpg",
-      "/images/Southbrooke/Night_Aerial_Cam.jpg",
-      "/images/Southbrooke/Pool Cam.jpg",
+      "/images/Southbrooke/Block-5.webp",
+      "/images/Southbrooke/Day Elevation Cam.webp",
+      "/images/Southbrooke/Entrance_Cam_Day.webp",
+      "/images/Southbrooke/Night_Aerial_Cam.webp",
+      "/images/Southbrooke/Pool Cam.webp",
     ],
   },
   Avenuepark: {
@@ -152,11 +152,11 @@ export const PROJECTS_DATA = {
       "https://drive.google.com/file/d/1MKqi3iUe2lMaVpBrlxrxabJyNjgziPme/view?usp=sharing",
     websiteLink:
       "https://www.casagrand.co.in/residential/ongoing-projects-chennai-perungudi/casagrand-avenue-park/",
-    image: "/images/Avenuepark/image copy 2.png",
+    image: "/images/Avenuepark/image copy 2.webp",
     images: [
-      "/images/Avenuepark/image copy 2.png",
-      "/images/Avenuepark/image copy.png",
-      "/images/Avenuepark/image.png",
+      "/images/Avenuepark/image copy 2.webp",
+      "/images/Avenuepark/image copy.webp",
+      "/images/Avenuepark/image.webp",
     ],
   },
   Massimo: {
@@ -292,15 +292,15 @@ export const PROJECTS_DATA = {
       "https://www.casagrand.co.in/wp-content/uploads/2024/02/Suncity-Ph-2-Brochure_11in_Low-res.pdf",
     websiteLink:
       "https://www.casagrand.co.in/residential/ongoing-projects-chennai/casagrand-suncity/",
-    image: "/images/Suncity/Copy of Aerial Day 2.jpg",
+    image: "/images/Suncity/Copy of Aerial Day 2.webp",
     images: [
-      "/images/Suncity/Copy of Aerial Day 2.jpg",
-      "/images/Suncity/Copy of Mother Earth.jpg",
-      "/images/Suncity/Copy of Night.jpg",
-      "/images/Suncity/Copy of Pull Back Day.jpg",
-      "/images/Suncity/Copy of Pull Back Dusk.jpg",
-      "/images/Suncity/Copy of Pull Back_View.jpg",
-      "/images/Suncity/Copy of Tower Dusk.jpg",
+      "/images/Suncity/Copy of Aerial Day 2.webp",
+      "/images/Suncity/Copy of Mother Earth.webp",
+      "/images/Suncity/Copy of Night.webp",
+      "/images/Suncity/Copy of Pull Back Day.webp",
+      "/images/Suncity/Copy of Pull Back Dusk.webp",
+      "/images/Suncity/Copy of Pull Back_View.webp",
+      "/images/Suncity/Copy of Tower Dusk.webp",
     ],
   },
   Majestica: {
@@ -321,14 +321,14 @@ export const PROJECTS_DATA = {
       "https://www.casagrand.co.in/wp-content/uploads/2023/05/Majestica-Broucher-finished_compressed-1.pdf",
     websiteLink:
       "https://www.casagrand.co.in/residential/ongoing-projects-chennai-manapakkam/casagrand-majestica/",
-    image: "/images/Majestica/Copy of Aerial Dusk.jpg",
+    image: "/images/Majestica/Copy of Aerial Dusk.webp",
     images: [
-      "/images/Majestica/Copy of Aerial Dusk.jpg",
-      "/images/Majestica/Copy of Amphitheater.jpg",
-      "/images/Majestica/Copy of Kids Play Area.jpg",
-      "/images/Majestica/Copy of Outdoor Gym.jpg",
-      "/images/Majestica/Copy of Podium Dusk.jpg",
-      "/images/Majestica/Copy of Podium.jpg",
+      "/images/Majestica/Copy of Aerial Dusk.webp",
+      "/images/Majestica/Copy of Amphitheater.webp",
+      "/images/Majestica/Copy of Kids Play Area.webp",
+      "/images/Majestica/Copy of Outdoor Gym.webp",
+      "/images/Majestica/Copy of Podium Dusk.webp",
+      "/images/Majestica/Copy of Podium.webp",
     ],
   },
   Cloud9: {
@@ -350,15 +350,15 @@ export const PROJECTS_DATA = {
       "https://www.casagrand.co.in/wp-content/uploads/2023/09/CG_-Cloud9-Brochure-_-Artwork-Jul-24_compressed.pdf",
     websiteLink:
       "https://www.casagrand.co.in/residential/ongoing-projects-chennai-sholinganallur/casagrand-cloud9/",
-    image: "/images/Cloud9/Copy of Aerial.jpg",
+    image: "/images/Cloud9/Copy of Aerial.webp",
     images: [
-      "/images/Cloud9/Copy of Aerial.jpg",
-      "/images/Cloud9/Copy of Balcony view.jpg",
-      "/images/Cloud9/Copy of Swimming Pool A.jpg",
-      "/images/Cloud9/Copy of Swimming Pool Dusk A Low.jpg",
-      "/images/Cloud9/Copy of Swimming Pool Dusk B.jpg",
-      "/images/Cloud9/Copy of Swimming Pool Dusk C.jpg",
-      "/images/Cloud9/Copy of Swimming Pool Dusk D.jpg",
+      "/images/Cloud9/Copy of Aerial.webp",
+      "/images/Cloud9/Copy of Balcony view.webp",
+      "/images/Cloud9/Copy of Swimming Pool A.webp",
+      "/images/Cloud9/Copy of Swimming Pool Dusk A Low.webp",
+      "/images/Cloud9/Copy of Swimming Pool Dusk B.webp",
+      "/images/Cloud9/Copy of Swimming Pool Dusk C.webp",
+      "/images/Cloud9/Copy of Swimming Pool Dusk D.webp",
     ],
   },
   Jarvis: {
@@ -427,12 +427,12 @@ export const PROJECTS_DATA = {
       "https://www.casagrand.co.in/wp-content/uploads/2023/02/Casagrand-Aria-Brochure_Lowres-1.pdf",
     websiteLink:
       "https://www.casagrand.co.in/residential/ongoing-projects-chennai-tambaram/casagrand-aria/",
-    image: "/images/Aria/image copy 2.png",
+    image: "/images/Aria/image copy 2.webp",
     images: [
-      "/images/Aria/image copy 2.png",
-      "/images/Aria/image copy 3.png",
-      "/images/Aria/image copy.png",
-      "/images/Aria/image.png",
+      "/images/Aria/image copy 2.webp",
+      "/images/Aria/image copy 3.webp",
+      "/images/Aria/image copy.webp",
+      "/images/Aria/image.webp",
     ],
   },
   HolaChennai: {
@@ -492,31 +492,31 @@ export const PROJECTS_DATA = {
       "/images/Osaka/Copy of Shot_33_Hiz_optimized.webp",
     ],
   },
-  Caladium: {
-    name: "Caladium",
-    location: "Wagholi",
-    city: "Pune",
-    locationLink: "https://maps.app.goo.gl/EBXJeUn4B1XLydbe6",
-    acres: "2.8 Acres",
-    nearby: "Located in Upper Kharadi, Pune",
-    configuration: "2 BHK and 3 BHK",
-    startingRate: "Nil",
-    price: "₹1.2Cr - ₹1.5Cr",
-    budgetRange: "₹1.2Cr - ₹1.5Cr",
-    reraNumber: "RERA number - P52100080302",
-    description:
-      "Discover a landmark lifestyle at Upper Kharadi — an exclusive Singapore-styled apartment community spread across 2.8 acres. Designed with global sensibilities, this beautifully planned enclave features 334 premium 2 & 3 BHK residences that seamlessly blend urban sophistication with the calm elegance of nature.",
-    brochureLink:
-      "https://www.casagrand.co.in/wp-content/uploads/2025/05/Caladium-Brochure-Low.pdf",
-    websiteLink:
-      "https://www.casagrand.co.in/residential/ongoing-projects-pune/casagrand-caladium/",
-    image: "/images/Caladium/image copy 2.png",
-    images: [
-      "/images/Caladium/image copy 2.png",
-      "/images/Caladium/image copy.png",
-      "/images/Caladium/image.png",
-    ],
-  },
+  // Caladium: {
+  //   name: "Caladium",
+  //   location: "Wagholi",
+  //   city: "Pune",
+  //   locationLink: "https://maps.app.goo.gl/EBXJeUn4B1XLydbe6",
+  //   acres: "2.8 Acres",
+  //   nearby: "Located in Upper Kharadi, Pune",
+  //   configuration: "2 BHK and 3 BHK",
+  //   startingRate: "Nil",
+  //   price: "₹1.2Cr - ₹1.5Cr",
+  //   budgetRange: "₹1.2Cr - ₹1.5Cr",
+  //   reraNumber: "RERA number - P52100080302",
+  //   description:
+  //     "Discover a landmark lifestyle at Upper Kharadi — an exclusive Singapore-styled apartment community spread across 2.8 acres. Designed with global sensibilities, this beautifully planned enclave features 334 premium 2 & 3 BHK residences that seamlessly blend urban sophistication with the calm elegance of nature.",
+  //   brochureLink:
+  //     "https://www.casagrand.co.in/wp-content/uploads/2025/05/Caladium-Brochure-Low.pdf",
+  //   websiteLink:
+  //     "https://www.casagrand.co.in/residential/ongoing-projects-pune/casagrand-caladium/",
+  //   image: "/images/Caladium/image copy 2.webp",
+  //   images: [
+  //     "/images/Caladium/image copy 2.webp",
+  //     "/images/Caladium/image copy.webp",
+  //     "/images/Caladium/image.webp",
+  //   ],
+  // },
 };
 
 // Get all projects as an array

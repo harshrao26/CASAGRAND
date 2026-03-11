@@ -73,9 +73,19 @@ export default function FilterBar() {
                             <p className="text-[10px] font-bold text-gray-400 tracking-widest uppercase">Select Budget</p>
                             <p className="text-[11px] font-bold text-[#f5a631]">{priceLabel(localMin)} – {priceLabel(localMax)}</p>
                         </div>
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-2 items-center">
+                            <button
+                                onClick={handleClear}
+                                className={`px-4 py-1.5 rounded-lg text-xs font-bold transition-all border ${!filtersApplied
+                                        ? 'bg-[#FCB63A] border-[#FCB63A] text-black shadow-sm'
+                                        : 'bg-white border-gray-200 text-gray-600 hover:border-[#FCB63A] hover:text-[#FCB63A]'
+                                    }`}
+                            >
+                                All Projects
+                            </button>
+                            <div className="h-6 w-px bg-gray-200 mx-1 hidden sm:block"></div>
                             {budgetRanges.map((range) => {
-                                const isActive = localMin === range.min && localMax === range.max;
+                                const isActive = filtersApplied && localMin === range.min && localMax === range.max;
                                 return (
                                     <button
                                         key={range.label}
@@ -85,11 +95,10 @@ export default function FilterBar() {
                                             // Apply filters immediately and scroll
                                             applyFilters({ city: localCity, priceRange: [range.min, range.max] });
                                         }}
-                                        className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all border ${
-                                            isActive
+                                        className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all border ${isActive
                                                 ? 'bg-[#FCB63A] border-[#FCB63A] text-black shadow-sm'
                                                 : 'bg-white border-gray-200 text-gray-600 hover:border-[#FCB63A] hover:text-[#FCB63A]'
-                                        }`}
+                                            }`}
                                     >
                                         {range.label}
                                     </button>
