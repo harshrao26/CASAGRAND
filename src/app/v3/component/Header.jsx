@@ -33,7 +33,7 @@ const Header = () => {
                 {/* Left Box (empty spacer for true centering) */}
  
                 {/* Center Logo */}
-                <div className="flex-1 flex justify-start md:justify-center">
+                <div className="flex flex justify-start md:justify-center">
                     <Link href="/" className="relative block h-10 w-40 md:h-12 md:w-48 transition-transform hover:scale-105">
                         <Image
                             src="/Casagrand-Logo1.webp"

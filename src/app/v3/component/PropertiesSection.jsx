@@ -233,7 +233,7 @@ export default function PropertiesSection() {
                                     </div>
 
                                     {/* Action Buttons */}
-                                    <div className="mt-auto flex flex-col gap-2.5">
+                                    <div className="mt-auto flex  gap-2.5">
                                         <button
                                             onClick={() => handleViewDetails(property)}
                                             className="bg-[#fca326] hover:bg-[#e09121] text-black py-2.5 px-4 rounded-xl transition-all text-[9px] sm:text-[11px] font-bold w-full shadow-sm active:scale-95"
