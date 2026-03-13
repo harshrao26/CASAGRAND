@@ -406,8 +406,15 @@ export const PROJECTS_DATA = {
       "https://www.casagrand.co.in/wp-content/uploads/2023/02/First-City-E-brochure-20-years.pdf",
     websiteLink:
       "https://www.casagrand.co.in/residential/ongoing-projects-chennai-sholinganallur/casagrand-firstcity/",
-    image: "/images/placeholder.webp",
-    images: ["/images/placeholder.webp"],
+    image: "/images/Firscity/Aerial A-optimized.webp",
+    images: [
+      "/images/Firscity/Aerial A-optimized.webp",
+      "/images/Firscity/Aerial B-optimized.webp",
+      "/images/Firscity/Clubhouse-optimized.webp",
+      "/images/Firscity/Elevation View-optimized.webp",
+      "/images/Firscity/Entry plaza-optimized.webp",
+      "/images/Firscity/Night View-optimized.webp",
+    ],
   },
   Aria: {
     name: "Aria",
