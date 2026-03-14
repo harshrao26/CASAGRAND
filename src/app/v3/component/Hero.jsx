@@ -2,12 +2,14 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Loader2 } from 'lucide-react';
+import { useUTMs } from '@/hooks/useUTMs';
 import LeadForm from './LeadForm';
 
 const Hero = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
     const [showModal, setShowModal] = useState(false);
+    const utmContext = useUTMs();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -17,11 +19,16 @@ const Hero = () => {
         const formData = new FormData(e.target);
         const data = Object.fromEntries(formData.entries());
 
+        const payload = {
+            ...data,
+            ...utmContext
+        };
+
         try {
             const response = await fetch('/api/salesforce', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data),
+                body: JSON.stringify(payload),
             });
             const result = await response.json();
             if (result.success) {
@@ -42,14 +49,14 @@ const Hero = () => {
             {/* Background Image */}
             <div className="absolute inset-0  z-0">
                 <Image
-                    src="/images/Elysium/image copy_optimized.webp"
-                    alt="Casa Platinum Skyline"
+                    src="/images/Estancia/Pool Cam_Final_optimized.webp"
+                    alt="Casagrand Estancia Pool View"
                     fill
                     className="object-cover opacity-200 saturate-200"
                     priority
                 />
                 {/* Re-designed overlays for V3 luxury look */}
-                <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/20 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-black/70 to-black/0 z-10" />
                 {/* <div className="absolute inset-0 bg-gradient-to-t from-[#FDB33A]/70 via-transparent to-[#FDB33A]/70 z-10" /> */}
             </div>
 

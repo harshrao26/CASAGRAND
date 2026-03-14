@@ -1,3 +1,5 @@
+import { Suspense } from 'react';
+import UTMTracker from "@/components/UTMTracker";
 import { Montserrat, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 
@@ -15,9 +17,9 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata = {
   title:
-    "Casagrand Chennai - Premium Homes & Apartments | RERA Approved Projects",
+    "Casagrand Bangalore - Premium Homes & Apartments | RERA Approved Projects",
   description:
-    "Explore premium Casagrand residential projects in Chennai. Get instant access to floor plans, pricing, and exclusive offers. RERA approved developments with 20+ years of excellence.",
+    "Explore premium Casagrand residential projects in Bangalore. Get instant access to floor plans, pricing, and exclusive offers. RERA approved developments with 20+ years of excellence.",
 };
 
 export default function RootLayout({ children }) {
@@ -26,6 +28,9 @@ export default function RootLayout({ children }) {
       <body
         // className={`${montserrat.variable} ${cormorant.variable} font-sans antialiased`}
       >
+        <Suspense fallback={null}>
+            <UTMTracker />
+        </Suspense>
         {children}
       </body>
     </html>

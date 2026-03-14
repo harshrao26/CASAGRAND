@@ -14,6 +14,8 @@ export async function POST(request) {
       utm_content,
       utm_term,
       preferredApartmentType,
+      submission_url,
+      initial_utm_url
     } = body;
 
     // Basic validation
@@ -30,6 +32,7 @@ export async function POST(request) {
     const lastName =
       nameParts.length > 1 ? nameParts.slice(1).join(" ") : "Unknown";
 
+    const isPaid = !!utm_source;
     const salesforcePayload = {
       FirstName: firstName,
       LastName: lastName,
@@ -45,7 +48,15 @@ export async function POST(request) {
       utm_source__c: utm_source || "",
       utm_term__c: utm_term || "",
       Locality_Preferred__c: "",
-      Call_Summary__c: "Website Lead Submission",
+      Call_Summary__c: [
+        `Website Lead Submission`,
+        `Type: ${isPaid ? 'PAID LEAD' : 'ORGANIC/DIRECT'}`,
+        `Page: ${submission_url || 'N/A'}`,
+        `Landing URL: ${initial_utm_url || 'N/A'}`,
+        utm_source ? `Source: ${utm_source}` : null,
+        utm_medium ? `Medium: ${utm_medium}` : null,
+        utm_campaign ? `Campaign: ${utm_campaign}` : null
+      ].filter(Boolean).join('\n'),
       Preferred_Apartment_Type__c: preferredApartmentType || "",
       MobilePhone: phone.startsWith("+") ? phone : `+91${phone}`,
     };
