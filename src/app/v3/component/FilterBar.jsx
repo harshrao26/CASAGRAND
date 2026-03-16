@@ -8,13 +8,14 @@ import { getAllProjects } from '@/data/projects';
 // Parse price string to a numeric value in Lakhs
 function parsePriceToLakhs(priceStr) {
     if (!priceStr) return null;
-    // Extract the first part of the range (e.g., "53L" from "53L - 1.30Cr")
-    const firstPart = priceStr.split(/[–-]/)[0].toLowerCase();
-    const nums = firstPart.match(/[\d.]+/g);
-    if (!nums) return null;
+    const clean = priceStr.toLowerCase();
+    // Match the first number and the unit that follows it (even if there are spaces/other chars in between)
+    const match = clean.match(/([\d.]+)\s*(cr|l|lakh|lc)/i);
+    if (!match) return null;
     
-    let val = parseFloat(nums[0]);
-    if (firstPart.includes('cr')) {
+    let val = parseFloat(match[1]);
+    const unit = match[2].toLowerCase();
+    if (unit === 'cr' || unit === 'lc') {
         val = val * 100;
     }
     return Math.round(val);
