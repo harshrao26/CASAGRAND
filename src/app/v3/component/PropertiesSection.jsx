@@ -7,6 +7,32 @@ import { useProjectContext } from '@/context/ProjectContext';
 import { getAllProjects, getProject } from '@/data/projects';
 import { MapPin, Sparkles, ChevronLeft, ChevronRight, Home, IndianRupee, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 
+const getProjectTags = (config) => {
+    if (!config) return null;
+    
+    const lowerConfig = config.toLowerCase();
+    const hasApartment = lowerConfig.includes('apartment');
+    const hasVilla = lowerConfig.includes('villa');
+    
+    // Only show the badge if it's an Apartment or Villa
+    if (!hasApartment && !hasVilla) return null;
+
+    const parts = [];
+    
+    // Extract BHK part (e.g., "3/4 BHK")
+    const bhkMatch = config.match(/[\d/]+\s*BHK/i);
+    if (bhkMatch) {
+        parts.push(bhkMatch[0].toUpperCase());
+    }
+    
+    // Type part
+    if (hasApartment) parts.push('Apartment');
+    if (hasVilla) parts.push('Villa');
+    
+    const uniqueParts = [...new Set(parts)];
+    return uniqueParts.join(' • ');
+};
+
 function PropertySlideshow({ property }) {
     const images = property.images?.length ? property.images : [property.image];
     const [current, setCurrent] = useState(0);
@@ -22,6 +48,15 @@ function PropertySlideshow({ property }) {
 
     return (
         <div className="relative h-[200px] sm:h-[300px] md:h-96 overflow-hidden rounded-t-xl mb-3 sm:mb-6 group/slide">
+            {/* Project Tags / Batch */}
+            {getProjectTags(property.configuration) && (
+                <div className="absolute top-0 right-0 z-20">
+                    <div className="bg-[#fca326] text-black text-[10px] sm:text-[12px] font-bold px-3 py-1.5 sm:px-4 sm:py-2 rounded-bl-xl shadow-lg border-l border-b border-white/20 animate-in fade-in slide-in-from-right-4 duration-500 whitespace-nowrap">
+                        {getProjectTags(property.configuration)}
+                    </div>
+                </div>
+            )}
+
             {/* Location Ribbon */}
             {/* <div className="absolute top-0 left-6 z-20">
                 <div className="bg-[#1C8A9B] text-white text-[11px] font-semibold px-4 pt-2 pb-4 [clip-path:polygon(0_0,100%_0,100%_100%,50%_80%,0_100%)] tracking-widest relative shadow-lg">
