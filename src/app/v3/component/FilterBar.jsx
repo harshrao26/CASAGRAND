@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { MapPin, SlidersHorizontal, X, ChevronDown } from 'lucide-react';
 import { useProjectContext } from '@/context/ProjectContext';
 import { getAllProjects } from '@/data/projects';
@@ -8,18 +8,15 @@ import { getAllProjects } from '@/data/projects';
 // Parse price string to a numeric value in Lakhs
 function parsePriceToLakhs(priceStr) {
     if (!priceStr) return null;
-    const s = priceStr.toLowerCase().replace(/[₹\s,]/g, '');
-    // Find all numbers in the string
-    const nums = s.match(/[\d.]+/g);
+    // Extract the first part of the range (e.g., "53L" from "53L - 1.30Cr")
+    const firstPart = priceStr.split(/[–-]/)[0].toLowerCase();
+    const nums = firstPart.match(/[\d.]+/g);
     if (!nums) return null;
-    // Take the first number found (minimum of a range)
+    
     let val = parseFloat(nums[0]);
-
-    if (s.includes('cr')) {
-        // e.g. "1.48Cr" → 148L
+    if (firstPart.includes('cr')) {
         val = val * 100;
     }
-    // Already in lakhs if just a number like "75 L"
     return Math.round(val);
 }
 
@@ -30,14 +27,52 @@ export default function FilterBar() {
     // Local state (uncommitted until "Search")
     const localCity = 'All';
     const [localMin, setLocalMin] = useState(0);
-    const [localMax, setLocalMax] = useState(500);
+    const [localMax, setLocalMax] = useState(1000);
 
-    const budgetRanges = [
-        { label: 'Under 1 Cr', min: 0, max: 100 },
-        { label: '₹1 - ₹1.5 Cr', min: 100, max: 150 },
-        { label: '₹1.5 - ₹2.5 Cr', min: 150, max: 250 },
-        { label: 'Above 2.5 Cr', min: 250, max: 500 },
-    ];
+    const budgetRanges = useMemo(() => {
+        const projects = getAllProjects();
+        const minPrices = projects
+            .map(p => parsePriceToLakhs(p.price))
+            .filter(price => price !== null);
+
+        if (minPrices.length === 0) return [];
+
+        const ranges = [];
+        // "Under 1 Cr" bucket
+        if (minPrices.some(p => p < 100)) {
+            ranges.push({ label: 'Under 1 Cr', min: 0, max: 100 });
+        }
+
+        const maxPriceFound = Math.max(...minPrices);
+        
+        // 50L increments starting from 100L (1 Cr) to avoid overlap with "Under 1 Cr"
+        for (let min = 100; min <= maxPriceFound; min += 50) {
+            const max = min + 50;
+            if (minPrices.some(p => p >= min && p < max)) {
+                const minLabel = (min / 100).toFixed(1).replace(/\.0$/, '');
+                const maxLabel = (max / 100).toFixed(1).replace(/\.0$/, '');
+                ranges.push({
+                    label: `₹${minLabel} - ₹${maxLabel} Cr`,
+                    min,
+                    max
+                });
+            }
+        }
+
+        // Add "Above X Cr" for any project that might have been skipped or if absolute max is needed
+        // But the loop handles everything up to maxPriceFound. 
+        // If the user specifically wants "Above 2.5 Cr" label if the max is > 250, we can do:
+        const absoluteMax = Math.floor(maxPriceFound / 50) * 50;
+        if (absoluteMax >= 250 && !ranges.some(r => r.min === absoluteMax)) {
+             ranges.push({
+                label: `Above ${absoluteMax / 100} Cr`,
+                min: absoluteMax,
+                max: 1000
+            });
+        }
+
+        return ranges;
+    }, []);
 
     // Sync with context on mount (if filters were already applied)
     useEffect(() => {
@@ -51,7 +86,7 @@ export default function FilterBar() {
 
     const handleClear = () => {
         setLocalMin(0);
-        setLocalMax(500);
+        setLocalMax(1000);
         clearFilters();
     };
 

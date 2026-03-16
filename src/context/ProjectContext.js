@@ -7,7 +7,7 @@ const ProjectContext = createContext();
 export function ProjectProvider({ children }) {
   const [selectedProject, setSelectedProject] = useState(null);
   const [filterCity, setFilterCity] = useState("All");
-  const [filterPriceRange, setFilterPriceRange] = useState([0, 500]); // in Lakhs
+  const [filterPriceRange, setFilterPriceRange] = useState([0, 1000]); // in Lakhs
   const [filtersApplied, setFiltersApplied] = useState(false);
   const propertiesSectionRef = useRef(null);
 
@@ -37,7 +37,7 @@ export function ProjectProvider({ children }) {
 
   const clearFilters = () => {
     setFilterCity("All");
-    setFilterPriceRange([0, 500]);
+    setFilterPriceRange([0, 1000]);
     setFiltersApplied(false);
   };
 

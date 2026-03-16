@@ -124,11 +124,13 @@ export default function PropertiesSection() {
     // Parse a price string to a numeric value in Lakhs for comparison
     const parseLakhs = (priceStr) => {
         if (!priceStr) return 0;
-        const s = priceStr.toLowerCase().replace(/[₹\s,]/g, '');
-        const nums = s.match(/[\d.]+/g);
+        const firstPart = priceStr.split(/[–-]/)[0].toLowerCase();
+        const nums = firstPart.match(/[\d.]+/g);
         if (!nums) return 0;
         let val = parseFloat(nums[0]);
-        if (s.includes('cr')) val = val * 100;
+        if (firstPart.includes('cr')) {
+            val = val * 100;
+        }
         return Math.round(val);
     };
 
