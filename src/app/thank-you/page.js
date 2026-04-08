@@ -70,12 +70,7 @@ export default function ThankYouPage() {
                                     <Home className="w-4 h-4" />
                                     Back to Projects
                                 </Link>
-                                <button 
-                                    className="inline-flex items-center justify-center gap-2 bg-white border-2 border-gray-100 hover:border-[#FCB63A] text-gray-700 font-bold py-3 px-6 rounded-2xl transition-all hover:-translate-y-1 active:scale-95 text-sm"
-                                >
-                                    Explore More
-                                    <ArrowRight className="w-4 h-4" />
-                                </button>
+                               
                             </div>
                         </div>
 
