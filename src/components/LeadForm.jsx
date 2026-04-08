@@ -1,8 +1,65 @@
 'use client';
 
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+
 export default function LeadForm({ className = "" }) {
+    const router = useRouter();
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
+    const [formData, setFormData] = useState({
+        fullName: '',
+        email: '',
+        phone: '',
+        preferredLocation: ''
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch('/api/salesforce', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    fullName: formData.fullName,
+                    email: formData.email,
+                    phone: formData.phone,
+                    projectInterested: formData.preferredLocation || 'Landing Page Inquiry',
+                    submission_url: typeof window !== 'undefined' ? window.location.href : '',
+                    initial_utm_url: typeof window !== 'undefined' ? window.location.href : '',
+                }),
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                router.push('/thank-you');
+            } else {
+                setError(result.message || 'Failed to submit form. Please try again.');
+            }
+        } catch (err) {
+            console.error('Form submission error:', err);
+            setError('An error occurred. Please try again later.');
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
-        <form className={`space-y-4 ${className}`}>
+        <form onSubmit={handleSubmit} className={`space-y-4 ${className}`}>
             {/* Full Name */}
             <div>
                 <label className="block text-sm font-semibold text-gray-900 mb-1.5">
@@ -10,9 +67,13 @@ export default function LeadForm({ className = "" }) {
                 </label>
                 <input
                     type="text"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
                     placeholder="Enter your name"
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all placeholder:text-gray-400"
                     required
+                    disabled={loading}
                 />
             </div>
 
@@ -23,9 +84,13 @@ export default function LeadForm({ className = "" }) {
                 </label>
                 <input
                     type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="your.email@example.com"
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all placeholder:text-gray-400"
                     required
+                    disabled={loading}
                 />
             </div>
 
@@ -36,9 +101,13 @@ export default function LeadForm({ className = "" }) {
                 </label>
                 <input
                     type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     placeholder="+91 98765 43210"
                     className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all placeholder:text-gray-400"
                     required
+                    disabled={loading}
                 />
             </div>
 
@@ -48,8 +117,14 @@ export default function LeadForm({ className = "" }) {
                     Preferred Location
                 </label>
                 <div className="relative">
-                    <select className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all appearance-none text-gray-900">
-                        <option value="" disabled selected>Select location</option>
+                    <select 
+                        name="preferredLocation"
+                        value={formData.preferredLocation}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all appearance-none text-gray-900 disabled:opacity-50"
+                        disabled={loading}
+                    >
+                        <option value="" disabled>Select location</option>
                         <option value="north-chennai">North Chennai</option>
                         <option value="west-chennai">West Chennai</option>
                         <option value="omr">OMR (Old Mahabalipuram Road)</option>
@@ -63,12 +138,20 @@ export default function LeadForm({ className = "" }) {
                 </div>
             </div>
 
+            {/* Error Message */}
+            {error && (
+                <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700">
+                    {error}
+                </div>
+            )}
+
             {/* Submit Button */}
             <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3.5 rounded-lg font-bold text-base transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all mt-2"
+                disabled={loading}
+                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-3.5 rounded-lg font-bold text-base transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all mt-2 disabled:cursor-not-allowed"
             >
-                View Projects & Offers
+                {loading ? 'Submitting...' : 'View Projects & Offers'}
             </button>
 
             {/* Security Note */}

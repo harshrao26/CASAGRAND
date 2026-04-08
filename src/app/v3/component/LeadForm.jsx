@@ -1,10 +1,12 @@
 'use client';
 
 import { useState, useMemo } from 'react';
+import { useRouter } from 'next/navigation';
 import { useUTMs } from '@/hooks/useUTMs';
 import { User, Mail, Phone, Lock, ArrowRight, Loader2 } from 'lucide-react';
 
 export default function LeadForm({ className = "", projectName = "General Enquiry" }) {
+    const router = useRouter();
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
     const utmContext = useUTMs();
@@ -36,8 +38,7 @@ export default function LeadForm({ className = "", projectName = "General Enquir
             const result = await response.json();
 
             if (result.success) {
-                setSubmitStatus({ type: 'success', message: 'Thank you! We will contact you shortly.' });
-                e.target.reset();
+                router.push('/thank-you');
             } else {
                 setSubmitStatus({ type: 'error', message: result.message || 'Something went wrong.' });
             }
